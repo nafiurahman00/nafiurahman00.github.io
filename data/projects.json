@@ -14,6 +14,19 @@
         ]
     },
     {
+        "title": "Secret Breach Prevention in Software Issue Reports",
+        "image": "SecretBreach.png",
+        "description": "My Undergrad Thesis which focuses on preventing secret breaches in software issue reports by utilizing a combination of pre-trained language models (BERT, RoBERTa) and regex-based detection techniques.",
+        "date": "2024",
+        "github": "https://github.com/",
+        "stacks": [
+            "BERT",
+            "RoBERTa",
+            "Regex",
+            "Python"
+        ]
+    },
+    {
         "title": "Brain Age Estimation",
         "image": "BrainAgeEstimation.png",
         "description": "This project focuses on estimating brain age using MRI scans. We utilized the ADNI dataset, extracting features from MRI slices with a Vision Transformer (ViT) and feeding them into a Convolutional Neural Network (CNN) for prediction. The approach leverages deep learning techniques for accurate age estimation.",
@@ -53,17 +66,16 @@
         ]
     },
     {
-        "title": "Secret Breach Prevention in Software Issue Reports",
-        "image": "SecretBreach.png",
-        "description": "My Undergrad Thesis which focuses on preventing secret breaches in software issue reports by utilizing a combination of pre-trained language models (BERT, RoBERTa) and regex-based detection techniques.",
-        "date": "2024",
-        "github": "https://github.com/",
+        "title": "Ray Tracing",
+        "image": "RayTracing.png",
+        "description": "OpenGL based program that builds a ray casting + tracing program to render scenes with phong lighting.",
+        "date": "2023",
+        "github": "https://github.com/NafiuRahman77/CSE-410/tree/master/Offline-3",
         "stacks": [
-            "BERT",
-            "RoBERTa",
-            "Regex",
-            "Python"
+            "C++",
+            "OpenGL"
         ]
+
     },
     {
         "title": "Football Manager",
