@@ -6,4 +6,4 @@ This portfolio was generated using the [Simple Portfolio Generator](https://gith
 This is a static website for showcasing my portfolio. It includes an `index.html` file and an `assets/` folder for images and other resources.
 
 ## Usage
-You can visit my live portfolio [here](https://shahriar-raj.github.io/my-portfolio/).
+You can visit my live portfolio [here](https://nafiurahman77.github.io/my-portfolio/).
