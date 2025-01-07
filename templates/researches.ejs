@@ -1,0 +1,49 @@
+<article class="research" data-page="research">
+
+    <header>
+      <h2 class="h2 article-title">Research</h2>
+    </header>
+
+    <section class="timeline">
+      <ol class="timeline-list">
+
+        <% researches.forEach(function(research){ %>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title"><%=research.title%></h4>
+            <h5 class="h5 timeline-item-subtitle-research"><%=research.subtitle%></h5>
+            <!-- add paper link in underlined format -->
+            <% if(research.paper) { %>
+              <h5 class="h5 timeline-item-subtitle-research">
+                Paper: <a href="<%=research.paper%>" target="_blank" class="underline light-violet-link"><%=research.paper%></a>
+              </h5>
+            <% } %>
+            
+
+            <% if(research.coauthors && research.coauthors.length > 0 ) { %>
+                <h5 class="h5 timeline-item-subtitle-research">Co-authors: 
+                    <% research.coauthors.forEach(function(coauthor, index){ %>
+                        <%= coauthor %>
+                        <% if(index < research.coauthors.length - 1) { %> , <% } %>
+                    <% }); %>
+                </h5>
+            <% } %>
+            <% if(research.keywords && research.keywords.length > 0 ) { %>
+                <h5 class="h5 timeline-item-subtitle-research">Keywords: 
+                    <% research.keywords.forEach(function(keyword, index){ %>
+                        <%= keyword %>
+                        <% if(index < research.keywords.length - 1) { %> , <% } %>
+                    <% }); %>
+                </h5>
+            <% } %>
+              
+            <br>
+            <p class="timeline-text-bulletpoint">
+              <%=research.description%>
+            </p>
+          </li>
+        <% }); %>
+
+      </ol>
+
+    </section>
+  </article>

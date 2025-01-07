@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Secret Breach Prevention in Software Issue Reports",
+        "subtitle": "Undergrad Thesis",
+        "paper" : "https://arxiv.org/abs/2410.23657",
+        "coauthors": [
+            "Zahin Wahab",
+            "Sadif Ahmed",
+            "Dr. Rifat Shahriyar",
+            "Dr. Gias Uddin"
+        ],
+        "keywords": [
+            "Secret Breach Detection",
+            "Pre-trained Language Models",
+            "BERT",
+            "RoBERTa",
+            "Regex",
+            "Software Issue Reports"
+        ],
+        "description": "This thesis addresses the critical issue of secret breaches in software issue reports by creating a holistic solution. It includes curating a benchmark dataset of 25,000 issue reports with 437 confirmed instances of secret breaches. The study evaluates and enhances regex-based tools to improve detection accuracy, leveraging pre-trained language models to minimize false positives. Furthermore, the project introduces SBMBot, a browser extension that provides real-time feedback to users on GitHub to prevent secret breaches during issue report creation. By combining advanced machine learning models and practical tools, the project offers a robust approach to securing open-source repositories."
+    }
+]

@@ -1,0 +1,91 @@
+[
+    {
+        "title": "BusBuddy Client End",
+        "image": "BusBuddy.png",
+        "description": "BusBuddy is an Android app for BUET that lets users purchase tickets, access schedules, and track buses with a predictive algorithm. Teachers can manage bus requests and billing, while bus staff can scan tickets and monitor vehicles in real time.",
+        "date": "2023",
+        "github": "https://github.com/NafiuRahman77/BusBuddy-Client-End",
+        "stacks": [
+            "Android",
+            "Flutter",
+            "Express.js",
+            "PostgreSQL",
+            "Firebase"
+        ]
+    },
+    {
+        "title": "Brain Age Estimation",
+        "image": "BrainAgeEstimation.png",
+        "description": "This project focuses on estimating brain age using MRI scans. We utilized the ADNI dataset, extracting features from MRI slices with a Vision Transformer (ViT) and feeding them into a Convolutional Neural Network (CNN) for prediction. The approach leverages deep learning techniques for accurate age estimation.",
+        "date": "2024",
+        "github": "https://github.com/wjalal/cse472_DL_project/",
+        "stacks": [
+            "PyTorch",
+            "CNN",
+            "ViT",
+            "Python"
+        ]
+    },
+    {
+        "title": "Nishorgo",
+        "image": "Nishorgo.jpg",
+        "description": "Nishorgo is an innovative e-commerce website specializing in plant sales. Users can browse a diverse selection of plants, apply filters, add items to their carts, and place orders. The platform also features an admin panel that provides insights and statistics on sales and user activity.",
+        "date": "2023",
+        "github": "https://github.com/NafiuRahman77/Term-Project-2-2-Nishorgo",
+        "stacks": [
+            "PHP",
+            "MySQL",
+            "HTML",
+            "Tailwind CSS",
+            "JavaScript"
+        ]
+    },
+    {
+        "title": "Compiler",
+        "image": "compiler.png",
+        "description": "A subset of C Compiler made using Flex and Bison. It supports essential functionalities including loops, branching (if-else), and functions, with added support for integer arrays and recursion. The compiler parses and translates this subset of C code into executable machine code or an intermediate representation.",
+        "date": "2023",
+        "github": "https://github.com/NafiuRahman77/Compiler",
+        "stacks": [
+            "Bison",
+            "Flex",
+            "C"
+        ]
+    },
+    {
+        "title": "Secret Breach Prevention in Software Issue Reports",
+        "image": "SecretBreach.png",
+        "description": "My Undergrad Thesis which focuses on preventing secret breaches in software issue reports by utilizing a combination of pre-trained language models (BERT, RoBERTa) and regex-based detection techniques.",
+        "date": "2024",
+        "github": "https://github.com/",
+        "stacks": [
+            "BERT",
+            "RoBERTa",
+            "Regex",
+            "Python"
+        ]
+    },
+    {
+        "title": "Football Manager",
+        "image": "FootballManager.jpg",
+        "description": "Level 1-2 Term Project (Java FX + Networking). A simple project made using Java FX with implemented networking functionalities.",
+        "date": "2021",
+        "github": "https://github.com/NafiuRahman77/Term-Project-1-2-Football-Player-Marketplace",
+        "stacks": [
+            "Java",
+            "JavaFX"
+        ]
+    },
+    {
+        "title": "Catch the Egg",
+        "image": "CatchTheEgg.png",
+        "description": "Level 1-1 Term Project. A game made using Igraphics, an OpenGL wrapper in C++ language, where players can catch as many falling eggs as they can in a definite interval. Features customizable difficulty levels and a scoring system to track player performance.",
+        "date": "2021",
+        "github": "https://github.com/NafiuRahman77/Catch-The-Egg",
+        "stacks": [
+            "C++",
+            "OpenGL",
+            "Igraphics"
+        ]
+    }
+]
