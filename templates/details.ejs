@@ -36,21 +36,7 @@
               </li>
         <% } %>
 
-        <% if( user.codeforces) { %>
-            <li class="social-item">
-                <a href=<%=user.codeforces%> class="social-link" target="_blank" rel="noopener noreferrer">
-                  <img src="assets/images/code-forces.svg" style="width: 18px; height: 18px;">
-                </a>
-              </li>
-        <% } %>
-        
-        <% if(user.icpc) { %>
-            <li class="social-item">
-                <a href=<%=user.icpc%> class="social-link" target="_blank" rel="noopener noreferrer">
-                  <img src="assets/images/icpc.svg" style="width: 18px; height: 18px;">
-                </a>
-              </li>
-        <% } %>
+     
       </ul>
     </div>
 
@@ -92,5 +78,17 @@
                 </div>
               </li>
         <% } %>
+
+        <% if(user.cv) { %>
+          <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="document-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <a href="<%= user.cv %>" class="contact-link" download>Download Resume</a>
+              </div>
+          </li>
+      <% } %>
+      
       </ul>
   </aside>
