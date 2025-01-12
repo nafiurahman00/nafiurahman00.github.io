@@ -99,5 +99,27 @@
             "OpenGL",
             "Igraphics"
         ]
+    },
+    {
+        "title": "4-Bit MIPS Processor",
+        "image": "mips.jpg",
+        "description": "A hardware implementation of a 4-bit CPU that runs on the MIPS instruction set",
+        "date": "2023",
+        "github": "https://github.com/NafiuRahman77/CSE-306/tree/main/3-4_bit_PC_mips",
+        "stacks": [
+            "Logisim",
+            "ATMega32",
+            "C++"
+        ]
+    },
+    {
+        "title": "4-Bit ALU",
+        "image": "alu.jpg",
+        "description": "A hardware implementation of a 4-bit Arithmetic Logic Unit (ALU) that performs basic arithmetic and logical operations",
+        "date": "2023",
+        "github": "https://github.com/NafiuRahman77/CSE-306/tree/main/1-4_bit_ALU",
+        "stacks": [
+            "Logisim"
+        ]
     }
 ]
