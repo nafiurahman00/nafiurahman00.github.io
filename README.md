@@ -94,5 +94,3 @@ Software Security (Secret Detection, Vulnerability Analysis), Large Language Mod
 
 *   **Dean’s List:** Recognized for academic excellence at BUET.
 *   **Top 10 Team:** Robi Datathon 2024 – Competed in data analysis and predictive modeling challenges.
-
----
