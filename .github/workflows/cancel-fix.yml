@@ -1,0 +1,8 @@
+name: Cancel Fix
+on: push
+
+jobs:
+  nothing:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This is a placeholder to fix stuck workflows"
