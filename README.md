@@ -2,7 +2,7 @@
 📞 +8801933002218 | 📧 [nafiu.rahman@gmail.com](mailto:nafiu.rahman@gmail.com)
 🌐 [Portfolio](https://nafiurahman77.github.io) | [LinkedIn](https://www.linkedin.com/in/md-nafiu-rahman-1a782a262/) | [GitHub](https://github.com/NafiuRahman77)
 📍 Dhaka, Bangladesh
-**[Download CV](https://github.com/NafiuRahman77/nafiurahman77.github.io/blob/master/assets/files/Md_Nafiu_Rahman_resume.pdf)**
+[Download CV](https://github.com/NafiuRahman77/nafiurahman77.github.io/raw/refs/heads/master/assets/files/Md_Nafiu_Rahman_resume.pdf)**
 
 ---
 
