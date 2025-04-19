@@ -44,17 +44,14 @@ Software Security (Secret Detection, Vulnerability Analysis), Large Language Mod
 
 ## Education
 
-**Bangladesh University of Engineering and Technology (BUET)** | Dhaka, Bangladesh
-*Bachelor of Science in Computer Science and Engineering* | Feb 2020 – Mar 2025
+**Bangladesh University of Engineering and Technology (BUET)** | Dhaka, Bangladesh | *Bachelor of Science in Computer Science and Engineering* | Feb 2020 – Mar 2025
 *   CGPA: **3.81 / 4.00** (Major CGPA in Final Year: 3.94)
 *   Relevant Coursework: Machine Learning, Deep Learning, Software Security, Algorithms, Data Structures, Compiler Design, Database Systems, Artificial Intelligence.
 
-**Notre Dame College** | Dhaka, Bangladesh 
-*Higher Secondary School Certificate (HSC)* | 2017 - 2019
+**Notre Dame College** | Dhaka, Bangladesh | *Higher Secondary School Certificate (HSC)* | 2017 - 2019
 *   GPA: **5.00 / 5.00**
 
-**Bir Shrestha Noor Mohammad Public College** | Dhaka, Bangladesh 
-*Secondary School Certificate (SSC)* | 2015 - 2017
+**Bir Shrestha Noor Mohammad Public College** | Dhaka, Bangladesh | *Secondary School Certificate (SSC)* | 2015 - 2017
 *   GPA: **5.00 / 5.00**
 
 ---
