@@ -4,7 +4,9 @@ title: Home
 permalink: /
 ---
 
-![Md. Nafiu Rahman](assets/images/nfu.jpg)
+<div style="text-align: center;">
+  <img src="assets/images/nfu.jpg" alt="Md. Nafiu Rahman" width="200" style="border-radius: 50%;" />
+</div>
 
 # Md. Nafiu Rahman
 
