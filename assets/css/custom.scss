@@ -1,0 +1,40 @@
+// Custom SCSS for Jekyll site with dark mode support
+@import "minima";
+
+// Light theme (default)
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.site-header {
+  background-color: #333;
+  color: white;
+}
+
+.site-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+a {
+  color: #007acc;
+}
+
+// Dark mode styles
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+
+  .site-header {
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+
+  a {
+    color: #4ea3ff;
+  }
+}
