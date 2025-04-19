@@ -41,8 +41,3 @@ permalink: /research/
 - Integrated demographic features (e.g., gender) to improve accuracy.
 
 ---
-
-## Academic Achievements
-
-- **Dean’s List:** For academic excellence at BUET  
-- **Top 10 Team:** Robi Datathon 2024 – Data analytics & ML competition  

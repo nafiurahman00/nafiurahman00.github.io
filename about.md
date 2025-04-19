@@ -40,3 +40,9 @@ With a strong foundation in programming, data science, and full-stack developmen
 **Databases:** PostgreSQL, MongoDB, Firebase Firestore  
 **Tools & Platforms:** Git, Docker, Linux, Windows  
 **Compiler Construction:** Flex (Lex), Bison (Yacc), 8086 Assembly
+
+
+## Academic Achievements
+
+- **Dean’s List:** For academic excellence at BUET  
+- **Top 10 Team:** Robi Datathon 2024 – Data analytics & ML competition  

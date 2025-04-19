@@ -14,8 +14,6 @@ minima:
     - linkedin: md-nafiu-rahman-1a782a262
     - email: nafiu.rahman@gmail.com
   navigation:
-    - title: "Home"
-      url: "/"
     - title: "About"
       url: "/about/"
     - title: "Research"

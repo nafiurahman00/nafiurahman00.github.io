@@ -4,6 +4,8 @@ title: Home
 permalink: /
 ---
 
+![Md. Nafiu Rahman](assets/images/nfu.jpg)
+
 # Md. Nafiu Rahman
 
 📞 +8801933002218  
@@ -22,13 +24,3 @@ I'm a CSE graduate from BUET, passionate about research and development in **sof
 This website is a portfolio of my research, projects, and achievements. Feel free to explore!
 
 ---
-
-## 🚀 Quick Links
-
-- 🔬 [Research](/research/)
-- 💻 [Projects](/projects/)
-- 🙋‍♂️ [About Me](/about/)
-- 📬 [Contact](/contact/)
-
----
-

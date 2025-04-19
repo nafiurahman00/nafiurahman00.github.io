@@ -6,37 +6,32 @@ permalink: /projects/
 
 ## Selected Projects
 
-### BusBuddy  
-[Client GitHub](https://github.com/NafiuRahman77/BusBuddy-Client-End)  
-- BUET bus management app with ticketing, scheduling, and real-time tracking.  
-- Focused on frontend (Flutter) and supported backend logic.
+### BusBuddy Client End
+[GitHub](https://github.com/NafiuRahman77/BusBuddy-Client-End)  
+- Developed features for a comprehensive BUET bus management mobile app (ticketing, schedules, real-time tracking, billing).  
+- Contributed primarily to frontend development (Flutter) and provided backend support and UI/UX design input.
 
 ---
 
 ### Nishorgo  
 [GitHub](https://github.com/NafiuRahman77/Term-Project-2-2-Nishorgo)  
-- Plant-themed e-commerce website.  
-- Developed shopping cart, admin dashboard, and order tracking.  
-- Used Node.js, PostgreSQL.
+- Built backend functionalities for an e-commerce web platform specializing in plant sales.
+- Implemented features including shopping cart, admin analytics dashboard, and order filtering using Node.js and PostgreSQL. 
+- Provided design support.
 
----
-
-### Real-Time Chat Application  
-- Built entirely using Flutter and Firebase.  
-- Features: 1-to-1 messaging, group chat, and file sharing.
 
 ---
 
 ### C Subset Compiler  
 [GitHub](https://github.com/NafiuRahman77/Compiler)  
-- Custom compiler for a subset of C.  
-- Used Flex, Bison, and Assembly code generation.  
-- Supported recursion, arrays, and control structures.
+- Developed a compiler for a subset of the C language, supporting recursion, arrays, and control structures.
+- Implemented lexer (Flex), parser (Bison), and code generation targeting 8086 Assembly.
+- - Supported recursion, arrays, and control structures.
 
 ---
 
 ### Arduino Color & Size Sorter  
-- Developed sorting software using sensors and servos with Arduino.
+- Developed the control software for an Arduino-based system to automatically sort objects based on color and size using sensors and servo motors.
 
 ---
 
