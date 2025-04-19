@@ -1,4 +1,30 @@
-title: Md Nafiu Rahman
-logo: /assets/images/nfu.jpg
-description: Md Nafiu Rahman's personal website
-theme: jekyll-theme-minimal
+title: Md. Nafiu Rahman
+email: nafiu.rahman@gmail.com
+description: >- 
+  Personal portfolio website of Md. Nafiu Rahman.
+baseurl: ""
+url: "https://nafiurahman77.github.io"
+
+theme: minima
+
+
+minima:
+  social_links:
+    - github: NafiuRahman77
+    - linkedin: md-nafiu-rahman-1a782a262
+    - email: nafiu.rahman@gmail.com
+  navigation:
+    - title: "Home"
+      url: "/"
+    - title: "About"
+      url: "/about/"
+    - title: "Research"
+      url: "/research/"
+    - title: "Projects"
+      url: "/projects/"
+    - title: "Contact"
+      url: "/contact/"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
