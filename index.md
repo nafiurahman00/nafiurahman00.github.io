@@ -19,10 +19,10 @@ permalink: /
 
 ---
 
+
 ## 👋 Welcome
 
 I'm a CSE graduate from BUET, passionate about research and development in **software security**, **LLMs**, and **bioinformatics**.
 
 This website is a portfolio of my research, projects, and achievements. Feel free to explore!
 
----
