@@ -16,17 +16,17 @@ With a strong foundation in programming, data science, and full-stack developmen
 
 **Bangladesh University of Engineering and Technology (BUET)**  
 *Bachelor of Science in Computer Science and Engineering*  
-📍 Dhaka, Bangladesh | Feb 2020 – Mar 2025  
+- Dhaka, Bangladesh | Feb 2020 – Mar 2025  
 - CGPA: **3.81 / 4.00** (Major CGPA in Final Year: 3.94)
 
 **Notre Dame College**  
 *Higher Secondary School Certificate (HSC)*  
-📍 Dhaka, Bangladesh | 2017 - 2019  
+- Dhaka, Bangladesh | 2017 - 2019  
 - GPA: **5.00 / 5.00**
 
 **Bir Shrestha Noor Mohammad Public College**  
 *Secondary School Certificate (SSC)*  
-📍 Dhaka, Bangladesh | 2015 - 2017  
+- Dhaka, Bangladesh | 2015 - 2017  
 - GPA: **5.00 / 5.00**
 
 ---
