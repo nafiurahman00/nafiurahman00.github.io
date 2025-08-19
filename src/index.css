@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  background: var(--background);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
+}
+
+:root {
+  --background: #ffffff;
+  --text: #1a1a1a;
+  --card-bg: #f8f9fa;
+  --border: #e9ecef;
+  --accent: #007bff;
+  --accent-hover: #0056b3;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --background: #0d1117;
+  --text: #f0f6fc;
+  --card-bg: #161b22;
+  --border: #30363d;
+  --accent: #58a6ff;
+  --accent-hover: #1f6feb;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+html {
+  scroll-behavior: smooth;
+}

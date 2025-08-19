@@ -1,0 +1,20 @@
+[
+  {
+    "institution": "Bangladesh University of Engineering and Technology",
+    "degree": "Bachelor of Science in Computer Science and Engineering",
+    "details": "CGPA: 3.81/4.00 (3.94 in final year)",
+    "year": "Feb 2020 – Mar 2025"
+  },
+  {
+    "institution": "Notre Dame College",
+    "degree": "Higher Secondary Certificate",
+    "details": "GPA: 5.00/5.00",
+    "year": "2017 – 2019"
+  },
+  {
+    "institution": "Birshreshtha Noor Mohammad Public College",
+    "degree": "Secondary School Certificate",
+    "details": "GPA: 5.00/5.00",
+    "year": "2015 – 2017"
+  }
+]
