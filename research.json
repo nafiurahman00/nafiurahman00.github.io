@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Secret Breach Prevention in Software Artifacts",
+    "description": "Undergraduate thesis supervised by Dr. Rifat Shahriyar (BUET). Focused on preventing secret breaches in software issue reports using BERT, RoBERTa, and regex-based detection techniques. Developed a detection tool and conducted a user survey.",
+    "year": "2025",
+    "arxivLink": "https://arxiv.org/abs/2410.23657",
+    "status": "Ongoing"
+  },
+  {
+    "title": "Secret Detection in Source Codes Using Large Language Models",
+    "description": "Research under Dr. Rifat Shahriyar (BUET) on secret detection in source codes using LLMs. Exploring zero-shot, few-shot, and fine-tuning approaches on LLAMA and Mistral.",
+    "year": "2025",
+    "arxivLink": "https://arxiv.org/abs/2504.18784",
+    "status": "Accepted in technical track in ESEM'2025"
+  },
+  {
+    "title": "Brain Age Estimation from MRI Data",
+    "description": "Research under Dr. M Sohel Rahman (BUET) on brain age estimation using Vision Transformers (ViT) for feature extraction from MRI scans and demographic attributes for prediction accuracy.",
+    "year": "2025",
+    "status": "Ongoing"
+  }
+]

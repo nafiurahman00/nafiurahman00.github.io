@@ -1,0 +1,26 @@
+[
+  {
+    "name": "BusBuddy",
+    "technologies": ["Flutter", "NodeJs", "PostgreSQL", "Firebase", "Git"],
+    "description": "Android app for BUET providing ticketing, schedules, bus tracking, and real-time updates for users, teachers, and bus staff.",
+    "githubLink": "https://github.com/nafiurahman00/BusBuddy-Client-End"
+  },
+  {
+    "name": "Nishorgo",
+    "technologies": ["JavaScript", "HTML", "CSS", "PHP", "MySQL", "Git"],
+    "description": "E-commerce site for plant sales with filtering, cart, admin analytics, and order management.",
+    "githubLink": "https://github.com/nafiurahman00/Term-Project-2-2-Nishorgo"
+  },
+  {
+    "name": "Compiler",
+    "technologies": ["C", "C++", "Lex", "Yacc", "8086-Assembly"],
+    "description": "Subset of a C compiler with loops, branching, recursion, and intermediate code generation. Implemented lexer, parser, and code generator.",
+    "githubLink": "https://github.com/nafiurahman00/Compiler"
+  },
+  {
+    "name": "Catch the Egg",
+    "technologies": ["OpenGL", "C++", "Igraphics"],
+    "description": "Game using Igraphics for catching falling eggs, with scoring and difficulty levels. Solely implemented all game features.",
+    "githubLink": "https://github.com/nafiurahman00/Catch-The-Egg"
+  }
+]
