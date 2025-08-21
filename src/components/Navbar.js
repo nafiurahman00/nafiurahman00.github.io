@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Moon, Sun, Menu, X } from "lucide-react";
@@ -7,23 +7,33 @@ import { cn } from "../lib/utils";
 function Navbar({ theme, setTheme }) {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navRef = useRef(null);
 
-  // Close mobile menu when clicking outside or on route change
+  // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (isMobileMenuOpen && !event.target.closest('.navbar')) {
+      if (navRef.current && !navRef.current.contains(event.target) && isMobileMenuOpen) {
         setIsMobileMenuOpen(false);
       }
     };
 
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
+    if (isMobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, [isMobileMenuOpen]);
 
   // Close mobile menu on route change
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(prev => !prev);
+  };
 
   const navItems = [
     { path: "/", label: "About" },
@@ -35,11 +45,11 @@ function Navbar({ theme, setTheme }) {
   ];
 
   return (
-    <nav className="navbar sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav ref={navRef} className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center justify-between px-4 md:px-6">
         <Link 
           to="/"
-          className="flex items-center space-x-2 font-bold text-xl bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+          className="flex items-center space-x-2 font-bold text-xl bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
         >
           Md Nafiu Rahman
         </Link>
@@ -99,7 +109,7 @@ function Navbar({ theme, setTheme }) {
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            onClick={toggleMobileMenu}
             className="h-9 w-9"
           >
             {isMobileMenuOpen ? (

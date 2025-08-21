@@ -42,7 +42,7 @@ function Research() {
         <h2 className="text-3xl md:text-4xl font-bold text-foreground">
           Research Experience
         </h2>
-        <div className="w-20 h-1 bg-gradient-to-r from-primary to-pink-500 mx-auto rounded-full"></div>
+        <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
         <p className="text-muted-foreground max-w-2xl mx-auto">
           My research work in Computer Science, focusing on cybersecurity, machine learning, and software engineering.
         </p>

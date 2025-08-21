@@ -45,6 +45,11 @@ body {
     --card-bg: 210 40% 96%;
     --accent-hover: 221.2 83.2% 45%;
     --shadow: 0 0% 0% / 0.1;
+    
+    /* Modern gradient colors */
+    --gradient-from: 221.2 83.2% 53.3%;
+    --gradient-via: 250.5 91.2% 66.3%;
+    --gradient-to: 238.7 83.5% 66.7%;
   }
 
   .dark {
@@ -73,6 +78,11 @@ body {
     --card-bg: 217.2 32.6% 17.5%;
     --accent-hover: 217.2 91.2% 50%;
     --shadow: 0 0% 0% / 0.3;
+    
+    /* Modern gradient colors for dark mode */
+    --gradient-from: 217.2 91.2% 59.8%;
+    --gradient-via: 250.5 91.2% 76.3%;
+    --gradient-to: 238.7 83.5% 76.7%;
   }
 }
 

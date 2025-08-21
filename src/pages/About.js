@@ -25,7 +25,7 @@ function About() {
   return (
     <main className="container max-w-4xl mx-auto py-8 px-4">
       <Card className="mb-8 overflow-hidden border-0 shadow-xl bg-gradient-to-br from-background to-secondary/20">
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-pink-500 to-purple-500"></div>
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600"></div>
         <CardHeader className="pb-4">
           <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
             <div className="flex-shrink-0">
@@ -36,7 +36,7 @@ function About() {
               />
             </div>
             <div className="flex-1 text-center md:text-left space-y-4">
-              <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
                 {profile.name}
               </h1>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
