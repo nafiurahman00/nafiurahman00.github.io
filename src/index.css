@@ -36,3 +36,58 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  .mobile-nav {
+    display: flex !important;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem !important;
+  }
+
+  .navbar {
+    padding: 0.8rem 1rem !important;
+  }
+
+  /* Mobile menu improvements */
+  .mobile-menu-item {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .mobile-menu-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Touch-friendly buttons */
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-nav {
+    display: none !important;
+  }
+  
+  .desktop-nav {
+    display: flex !important;
+  }
+}
+
+/* Additional mobile responsive styles */
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 1rem !important;
+  }
+  
+  .navbar {
+    padding: 0.5rem 0.8rem !important;
+  }
+}
