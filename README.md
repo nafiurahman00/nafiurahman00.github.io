@@ -1,6 +1,2 @@
-# CS Graduate Portfolio
-
-A modern, minimal personal website for a Computer Science graduate. Built with React. Features:
-- Navbar
-- Dark/Light mode toggle
-- Data-driven sections (education, research, skills, etc.)
+# Md Nafiu Rahman's portfolio
+A portfolio showcasing my skills, projects, and experiences as a Computer Science graduate. Built with React, Shadcn UI, and Tailwind CSS.
