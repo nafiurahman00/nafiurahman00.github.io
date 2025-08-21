@@ -96,7 +96,7 @@ function Skills() {
         {skillSections.map((section, idx) => (
           <Card 
             key={idx}
-            className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-primary/20"
+            className="group hover:shadow-lg dark:hover:shadow-xl dark:hover:shadow-slate-900/25 dark:hover:border-slate-600 transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-primary/20 hover:border-l-primary/40"
           >
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center gap-2 text-lg">

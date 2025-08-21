@@ -41,7 +41,7 @@ function Achievements() {
         </p>
       </div>
       
-      <Card className="border-l-4 border-l-yellow-500/20 hover:shadow-lg transition-all duration-300">
+      <Card className="border-l-4 border-l-yellow-500/20 hover:shadow-lg dark:hover:shadow-xl dark:hover:shadow-slate-900/25 dark:hover:border-slate-600 transition-all duration-300">
         <CardHeader className="pb-4">
           <CardTitle className="flex items-center gap-2 text-xl">
             <Trophy className="h-6 w-6 text-yellow-500" />

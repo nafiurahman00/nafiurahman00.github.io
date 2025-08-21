@@ -53,31 +53,31 @@ body {
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --background: 224 71% 8%;
+    --foreground: 210 40% 95%;
+    --card: 224 47% 11%;
+    --card-foreground: 210 40% 95%;
+    --popover: 224 47% 11%;
+    --popover-foreground: 210 40% 95%;
     --primary: 217.2 91.2% 59.8%;
     --primary-foreground: 222.2 84% 4.9%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 40% 95%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 40% 95%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
     --ring: 224.3 76.3% 94.1%;
     
     /* Legacy variables for existing components */
-    --text: 210 40% 98%;
-    --card-bg: 217.2 32.6% 17.5%;
+    --text: 210 40% 95%;
+    --card-bg: 215 27.9% 16.9%;
     --accent-hover: 217.2 91.2% 50%;
-    --shadow: 0 0% 0% / 0.3;
+    --shadow: 0 0% 0% / 0.25;
     
     /* Modern gradient colors for dark mode */
     --gradient-from: 217.2 91.2% 59.8%;
@@ -89,6 +89,18 @@ body {
 /* Legacy support for data-theme */
 [data-theme="dark"] {
   color-scheme: dark;
+}
+
+/* Enhanced shadow effects for dark mode */
+.dark {
+  /* Custom shadow for dark mode cards */
+  --tw-shadow-color: 0 0% 0%;
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -2px var(--tw-shadow-color);
+}
+
+/* Card hover improvements */
+.dark .group:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.25), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 html {
