@@ -38,6 +38,7 @@ function Navbar({ theme, setTheme }) {
   const navItems = [
     { path: "/", label: "About" },
     { path: "/education", label: "Education" },
+    { path: "/work", label: "Work" },
     { path: "/research", label: "Research" },
     { path: "/skills", label: "Skills" },
     { path: "/projects", label: "Projects" },

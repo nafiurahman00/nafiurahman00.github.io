@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Lecturer",
+    "company": "BRAC University",
+    "department": "Department of Computer Science and Engineering",
+    "location": "Dhaka, Bangladesh",
+    "duration": "June 2024 - Present",
+    "startDate": "June 2024",
+    "endDate": "Present",
+    "type": "Full-time",
+    "description": "Teaching undergraduate courses in Computer Science and Engineering."
+  },
+  {
+    "title": "Research Assistant",
+    "company": "Bangladesh University of Engineering and Technology (BUET)",
+    "department": "EDGE Project",
+    "location": "Dhaka, Bangladesh",
+    "duration": "March 2024 - June 2024",
+    "startDate": "March 2024",
+    "endDate": "June 2024",
+    "type": "Research Position",
+    "supervisor": "Dr. Anindya Iqbal",
+    "description": "Worked on developing automatic test case generation systems for script testing. Focused on improving software testing methodologies through automated approaches under the supervision of Dr. Anindya Iqbal.",
+    "responsibilities": [
+      "Implementing test script generation tools and frameworks",
+      "Collaborating with research team on product deliverables"
+    ],
+    "skills": ["Software Testing", "Test Automation", "Algorithm Development", "Research Methodology", "Python", "Software Engineering"]
+  }
+]
