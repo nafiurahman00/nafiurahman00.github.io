@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Button } from "./ui/button";
+import { Mail, Linkedin, Github, GraduationCap, Heart } from "lucide-react";
 
 function Footer() {
   const [profile, setProfile] = useState(null);
@@ -13,155 +15,65 @@ function Footer() {
   if (!profile) return null;
 
   return (
-    <footer style={{
-      background: "var(--card-bg)",
-      borderTop: "1px solid var(--border)",
-      padding: "3rem 2rem 2rem",
-      marginTop: "4rem",
-      textAlign: "center"
-    }}>
-      <div style={{
-        maxWidth: "1000px",
-        margin: "0 auto"
-      }}>
-        <h3 style={{
-          fontSize: "1.5rem",
-          fontWeight: 700,
-          marginBottom: "1.5rem",
-          color: "var(--text)"
-        }}>
-          Get In Touch
-        </h3>
-        
-        <div style={{
-          display: "flex",
-          justifyContent: "center",
-          gap: "2rem",
-          flexWrap: "wrap",
-          marginBottom: "2rem"
-        }}>
-          <a
-            href={`mailto:${profile.email}`}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "0.5rem",
-              color: "var(--text)",
-              textDecoration: "none",
-              fontWeight: 500,
-              fontSize: "1rem",
-              transition: "all 0.3s ease",
-              padding: "0.5rem"
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.color = "var(--accent)";
-              e.target.style.transform = "translateY(-2px)";
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.color = "var(--text)";
-              e.target.style.transform = "translateY(0)";
-            }}
-          >
-            <i className="fas fa-envelope" style={{ fontSize: "1.2rem" }}></i>
-            {profile.email}
-          </a>
+    <footer className="bg-card border-t mt-16">
+      <div className="container max-w-6xl mx-auto px-4 py-12">
+        <div className="text-center space-y-8">
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold text-foreground">
+              Get In Touch
+            </h3>
+          </div>
+          
+          <div className="flex justify-center gap-4 flex-wrap">
+            <Button variant="outline" size="icon" asChild>
+              <a href={`mailto:${profile.email}`} title="Email">
+                <Mail className="h-4 w-4" />
+              </a>
+            </Button>
 
-          <a
-            href={`tel:${profile.phone}`}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "0.5rem",
-              color: "var(--text)",
-              textDecoration: "none",
-              fontWeight: 500,
-              fontSize: "1rem",
-              transition: "all 0.3s ease",
-              padding: "0.5rem"
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.color = "var(--accent)";
-              e.target.style.transform = "translateY(-2px)";
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.color = "var(--text)";
-              e.target.style.transform = "translateY(0)";
-            }}
-          >
-            <i className="fas fa-phone" style={{ fontSize: "1.2rem" }}></i>
-            {profile.phone}
-          </a>
+            <Button variant="outline" size="icon" asChild>
+              <a
+                href={profile.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn"
+              >
+                <Linkedin className="h-4 w-4" />
+              </a>
+            </Button>
 
-          <a
-            href={profile.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "0.5rem",
-              color: "var(--text)",
-              textDecoration: "none",
-              fontWeight: 500,
-              fontSize: "1rem",
-              transition: "all 0.3s ease",
-              padding: "0.5rem"
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.color = "var(--accent)";
-              e.target.style.transform = "translateY(-2px)";
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.color = "var(--text)";
-              e.target.style.transform = "translateY(0)";
-            }}
-          >
-            <i className="fab fa-linkedin" style={{ fontSize: "1.2rem" }}></i>
-            LinkedIn
-          </a>
+            <Button variant="outline" size="icon" asChild>
+              <a
+                href={profile.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="GitHub"
+              >
+                <Github className="h-4 w-4" />
+              </a>
+            </Button>
 
-          <a
-            href={profile.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "0.5rem",
-              color: "var(--text)",
-              textDecoration: "none",
-              fontWeight: 500,
-              fontSize: "1rem",
-              transition: "all 0.3s ease",
-              padding: "0.5rem"
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.color = "var(--accent)";
-              e.target.style.transform = "translateY(-2px)";
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.color = "var(--text)";
-              e.target.style.transform = "translateY(0)";
-            }}
-          >
-            <i className="fab fa-github" style={{ fontSize: "1.2rem" }}></i>
-            GitHub
-          </a>
-        </div>
+            <Button variant="outline" size="icon" asChild>
+              <a
+                href="https://scholar.google.com/citations?user=VComsdEAAAAJ&hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Google Scholar"
+              >
+                <GraduationCap className="h-4 w-4" />
+              </a>
+            </Button>
+          </div>
 
-        <div style={{
-          borderTop: "1px solid var(--border)",
-          paddingTop: "1.5rem",
-          color: "var(--text)",
-          opacity: 0.7,
-          fontSize: "0.95rem"
-        }}>
-          <p style={{ margin: 0 }}>
-            © 2025 Md Nafiu Rahman. All rights reserved.
-          </p>
-          <p style={{ margin: "0.5rem 0 0", fontSize: "0.85rem" }}>
-            Built with React • Designed with passion
-          </p>
+          <div className="border-t pt-8 space-y-2">
+            <p className="text-muted-foreground text-sm">
+              © 2025 Md Nafiu Rahman. All rights reserved.
+            </p>
+            <p className="text-muted-foreground text-xs flex items-center justify-center gap-1">
+              Built with React & Shadcn/UI • Designed with 
+              <Heart className="h-3 w-3 text-red-500 fill-current" />
+            </p>
+          </div>
         </div>
       </div>
     </footer>

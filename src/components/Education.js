@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Badge } from "./ui/badge";
 
 function Education() {
   const [education, setEducation] = useState([]);
@@ -18,93 +20,51 @@ function Education() {
       });
   }, []);
 
+  if (education.length === 0) {
+    return (
+      <div className="flex items-center justify-center min-h-[40vh]">
+        <div className="animate-pulse text-muted-foreground">Loading education...</div>
+      </div>
+    );
+  }
+
   return (
-    <section id="education" style={{ marginBottom: "3rem" }}>
-      <h2 style={{ 
-        fontWeight: 700, 
-        fontSize: "2.2rem", 
-        marginBottom: "2rem",
-        color: "var(--accent)",
-        textAlign: "center",
-        position: "relative"
-      }}>
-        Education
-        <div style={{
-          position: "absolute",
-          bottom: "-8px",
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "60px",
-          height: "3px",
-          background: "linear-gradient(90deg, var(--accent), #ff6b6b)",
-          borderRadius: "2px"
-        }}></div>
-      </h2>
-      <div style={{ display: "grid", gap: "1.5rem" }}>
+    <section id="education" className="space-y-8">
+      <div className="text-center space-y-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+          Education
+        </h2>
+        <div className="w-20 h-1 bg-gradient-to-r from-primary to-pink-500 mx-auto rounded-full"></div>
+        <p className="text-muted-foreground max-w-2xl mx-auto">
+          My academic journey and educational qualifications in Computer Science and Engineering.
+        </p>
+      </div>
+      
+      <div className="grid gap-6">
         {education.map((ed, idx) => (
-          <div 
-            key={idx} 
-            style={{ 
-              background: "var(--card-bg)", 
-              padding: "2rem", 
-              borderRadius: "15px", 
-              boxShadow: "0 8px 25px var(--shadow)",
-              border: "1px solid var(--border)",
-              transition: "all 0.3s ease",
-              cursor: "pointer",
-              position: "relative",
-              overflow: "hidden"
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-5px)";
-              e.currentTarget.style.boxShadow = "0 15px 35px var(--shadow)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow = "0 8px 25px var(--shadow)";
-            }}
+          <Card 
+            key={idx}
+            className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-primary/20"
           >
-            <div style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "4px",
-              height: "100%",
-              background: `linear-gradient(180deg, var(--accent), ${idx % 2 === 0 ? '#ff6b6b' : '#4ecdc4'})`,
-            }}></div>
-            <h3 style={{ 
-              fontSize: "1.3rem", 
-              fontWeight: 700, 
-              marginBottom: "0.5rem",
-              color: "var(--text)"
-            }}>
-              {ed.degree}
-            </h3>
-            <p style={{ 
-              fontSize: "1.1rem", 
-              color: "var(--accent)", 
-              fontWeight: 600,
-              marginBottom: "0.5rem"
-            }}>
-              {ed.institution}
-            </p>
-            <p style={{ 
-              fontSize: "1rem", 
-              color: "var(--text)", 
-              opacity: 0.8,
-              marginBottom: "0.5rem"
-            }}>
-              {ed.details}
-            </p>
-            <p style={{ 
-              fontSize: "0.95rem", 
-              color: "var(--text)", 
-              opacity: 0.6,
-              fontStyle: "italic"
-            }}>
-              {ed.year}
-            </p>
-          </div>
+            <CardHeader className="pb-3">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                <CardTitle className="text-xl text-foreground">
+                  {ed.degree}
+                </CardTitle>
+                <Badge variant="outline" className="self-start md:self-center">
+                  {ed.year}
+                </Badge>
+              </div>
+              <p className="text-lg text-primary font-semibold">
+                {ed.institution}
+              </p>
+            </CardHeader>
+            <CardContent className="space-y-2">
+              <p className="text-muted-foreground leading-relaxed">
+                {ed.details}
+              </p>
+            </CardContent>
+          </Card>
         ))}
       </div>
     </section>

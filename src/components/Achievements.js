@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Badge } from "./ui/badge";
+import { Trophy } from "lucide-react";
 
 function Achievements() {
   const [achievements, setAchievements] = useState([]);
@@ -18,71 +21,51 @@ function Achievements() {
       });
   }, []);
 
-  return (
-    <section id="achievements" style={{ marginBottom: "3rem" }}>
-      <h2 style={{ 
-        fontWeight: 700, 
-        fontSize: "2.2rem", 
-        marginBottom: "2rem",
-        color: "var(--accent)",
-        textAlign: "center",
-        position: "relative"
-      }}>
-        Achievements
-        <div style={{
-          position: "absolute",
-          bottom: "-8px",
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "60px",
-          height: "3px",
-          background: "linear-gradient(90deg, var(--accent), #ff6b6b)",
-          borderRadius: "2px"
-        }}></div>
-      </h2>
-      <div style={{ 
-        background: "var(--card-bg)", 
-        padding: "2rem", 
-        borderRadius: "15px", 
-        boxShadow: "0 8px 25px var(--shadow)",
-        border: "1px solid var(--border)",
-        position: "relative",
-        overflow: "hidden"
-      }}>
-        <div style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "4px",
-          height: "100%",
-          background: "linear-gradient(180deg, #ffd700, var(--accent))",
-        }}></div>
-        <ul style={{ paddingLeft: "2rem", margin: 0 }}>
-          {achievements.map((ach, idx) => (
-            <li 
-              key={idx} 
-              style={{ 
-                marginBottom: "1rem", 
-                fontWeight: 600,
-                fontSize: "1.1rem",
-                color: "var(--text)",
-                position: "relative",
-                padding: "0.5rem 0",
-                borderBottom: idx < achievements.length - 1 ? "1px solid var(--border)" : "none"
-              }}
-            >
-              <span style={{
-                color: "#ffd700",
-                marginRight: "0.5rem",
-                fontSize: "1.2rem"
-              }}>
-                🏆
-              </span>
-              {ach}
-            </li>
-          ))}
-        </ul>
+  if (achievements.length === 0) {
+    return (
+      <div className="flex items-center justify-center min-h-[40vh]">
+        <div className="animate-pulse text-muted-foreground">Loading achievements...</div>
       </div>
+    );
+  }
+
+  return (
+    <section id="achievements" className="space-y-8">
+      <div className="text-center space-y-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+          Achievements
+        </h2>
+        <div className="w-20 h-1 bg-gradient-to-r from-primary to-pink-500 mx-auto rounded-full"></div>
+        <p className="text-muted-foreground max-w-2xl mx-auto">
+          Recognition and accomplishments throughout my academic and professional journey.
+        </p>
+      </div>
+      
+      <Card className="border-l-4 border-l-yellow-500/20 hover:shadow-lg transition-all duration-300">
+        <CardHeader className="pb-4">
+          <CardTitle className="flex items-center gap-2 text-xl">
+            <Trophy className="h-6 w-6 text-yellow-500" />
+            My Achievements
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            {achievements.map((achievement, idx) => (
+              <div 
+                key={idx}
+                className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/5 transition-colors"
+              >
+                <div className="mt-1">
+                  <Trophy className="h-4 w-4 text-yellow-500" />
+                </div>
+                <p className="text-foreground leading-relaxed font-medium">
+                  {achievement}
+                </p>
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
     </section>
   );
 }

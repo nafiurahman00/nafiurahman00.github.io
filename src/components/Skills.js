@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Badge } from "./ui/badge";
 
 function Skills() {
   const [skills, setSkills] = useState(null);
@@ -18,124 +20,118 @@ function Skills() {
       });
   }, []);
 
-  if (!skills) return null;
+  if (!skills) {
+    return (
+      <div className="flex items-center justify-center min-h-[40vh]">
+        <div className="animate-pulse text-muted-foreground">Loading skills...</div>
+      </div>
+    );
+  }
+
+  const skillSections = [
+    { 
+      title: "Research Interests", 
+      items: skills.researchInterests, 
+      type: "list",
+      icon: "🔬",
+      color: "primary"
+    },
+    { 
+      title: "Technical Skills", 
+      items: skills.technicalSkills, 
+      type: "tags",
+      icon: "⚡",
+      color: "secondary"
+    },
+    { 
+      title: "Database Skills", 
+      items: skills.databaseSkills, 
+      type: "tags",
+      icon: "🗄️",
+      color: "outline"
+    },
+    { 
+      title: "Full-Stack Development", 
+      items: skills.fullStack, 
+      type: "tags",
+      icon: "🌐",
+      color: "secondary"
+    },
+    { 
+      title: "Programming Languages", 
+      items: skills.programmingLanguages, 
+      type: "tags",
+      icon: "💻",
+      color: "outline"
+    },
+    { 
+      title: "Languages", 
+      items: skills.languages, 
+      type: "list",
+      icon: "🌍",
+      color: "primary"
+    },
+    { 
+      title: "Coursework", 
+      items: skills.coursework, 
+      type: "tags",
+      icon: "📚",
+      color: "secondary"
+    }
+  ];
 
   return (
-    <section id="skills" style={{ marginBottom: "3rem" }}>
-      <h2 style={{ 
-        fontWeight: 700, 
-        fontSize: "2.2rem", 
-        marginBottom: "2rem",
-        color: "var(--accent)",
-        textAlign: "center",
-        position: "relative"
-      }}>
-        Skills & Interests
-        <div style={{
-          position: "absolute",
-          bottom: "-8px",
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "60px",
-          height: "3px",
-          background: "linear-gradient(90deg, var(--accent), #ff6b6b)",
-          borderRadius: "2px"
-        }}></div>
-      </h2>
+    <section id="skills" className="space-y-8">
+      <div className="text-center space-y-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+          Skills & Interests
+        </h2>
+        <div className="w-20 h-1 bg-gradient-to-r from-primary to-pink-500 mx-auto rounded-full"></div>
+        <p className="text-muted-foreground max-w-2xl mx-auto">
+          A comprehensive overview of my technical expertise, research interests, and professional capabilities.
+        </p>
+      </div>
       
-      <div style={{ display: "grid", gap: "1.5rem" }}>
-        {[
-          { title: "Research Interests", items: skills.researchInterests, type: "list" },
-          { title: "Technical Skills", items: skills.technicalSkills, type: "tags" },
-          { title: "Database Skills", items: skills.databaseSkills, type: "tags" },
-          { title: "Full-Stack Development", items: skills.fullStack, type: "tags" },
-          { title: "Programming Languages", items: skills.programmingLanguages, type: "tags" },
-          { title: "Languages", items: skills.languages, type: "list" },
-          { title: "Coursework", items: skills.coursework, type: "tags" }
-        ].map((section, idx) => (
-          <div 
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {skillSections.map((section, idx) => (
+          <Card 
             key={idx}
-            style={{
-              background: "var(--card-bg)", 
-              padding: "2rem", 
-              borderRadius: "15px", 
-              boxShadow: "0 8px 25px var(--shadow)",
-              border: "1px solid var(--border)",
-              transition: "all 0.3s ease",
-              position: "relative",
-              overflow: "hidden"
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-3px)";
-              e.currentTarget.style.boxShadow = "0 12px 30px var(--shadow)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow = "0 8px 25px var(--shadow)";
-            }}
+            className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-primary/20"
           >
-            <div style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "4px",
-              height: "100%",
-              background: `linear-gradient(180deg, ${idx % 3 === 0 ? 'var(--accent)' : idx % 3 === 1 ? '#ff6b6b' : '#4ecdc4'}, var(--accent))`,
-            }}></div>
-            <h3 style={{ 
-              fontWeight: 700, 
-              fontSize: "1.2rem", 
-              marginBottom: "1rem",
-              color: "var(--text)"
-            }}>
-              {section.title}
-            </h3>
-            {section.type === "list" ? (
-              <ul style={{ paddingLeft: "1.2rem", margin: 0 }}>
-                {section.items.map((item, itemIdx) => (
-                  <li key={itemIdx} style={{ 
-                    marginBottom: "0.5rem", 
-                    color: "var(--text)", 
-                    opacity: 0.8,
-                    lineHeight: "1.5"
-                  }}>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.7rem" }}>
-                {section.items.map((skill, skillIdx) => (
-                  <span 
-                    key={skillIdx} 
-                    style={{ 
-                      background: "var(--background)", 
-                      padding: "0.6rem 1.2rem", 
-                      borderRadius: "25px", 
-                      fontWeight: 600,
-                      fontSize: "0.9rem",
-                      color: "var(--text)",
-                      border: "1px solid var(--border)",
-                      transition: "all 0.2s ease",
-                      cursor: "pointer"
-                    }}
-                    onMouseEnter={(e) => {
-                      e.target.style.background = "var(--accent)";
-                      e.target.style.color = "white";
-                      e.target.style.transform = "translateY(-2px)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.target.style.background = "var(--background)";
-                      e.target.style.color = "var(--text)";
-                      e.target.style.transform = "translateY(0)";
-                    }}
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            )}
-          </div>
+            <CardHeader className="pb-3">
+              <CardTitle className="flex items-center gap-2 text-lg">
+                <span className="text-xl">{section.icon}</span>
+                {section.title}
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {section.type === "list" ? (
+                <ul className="space-y-2">
+                  {section.items.map((item, itemIdx) => (
+                    <li 
+                      key={itemIdx} 
+                      className="text-muted-foreground leading-relaxed flex items-start gap-2"
+                    >
+                      <span className="text-primary mt-1.5 text-xs">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <div className="flex flex-wrap gap-2">
+                  {section.items.map((skill, skillIdx) => (
+                    <Badge 
+                      key={skillIdx}
+                      variant={section.color}
+                      className="hover:scale-105 transition-transform duration-200 cursor-default"
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              )}
+            </CardContent>
+          </Card>
         ))}
       </div>
     </section>

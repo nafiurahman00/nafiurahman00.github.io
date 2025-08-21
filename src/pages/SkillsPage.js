@@ -3,7 +3,7 @@ import Skills from "../components/Skills";
 
 function SkillsPage() {
   return (
-    <main style={{ maxWidth: 1000, margin: "2rem auto", padding: "0 2rem" }}>
+    <main className="container max-w-6xl mx-auto py-8 px-4">
       <Skills />
     </main>
   );

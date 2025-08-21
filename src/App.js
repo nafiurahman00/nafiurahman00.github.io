@@ -13,14 +13,16 @@ function App() {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
+    // Apply theme to both data-theme and class for compatibility
     document.body.setAttribute("data-theme", theme);
+    document.documentElement.classList.toggle("dark", theme === "dark");
   }, [theme]);
 
   return (
     <Router>
-      <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+      <div className="min-h-screen flex flex-col">
         <Navbar theme={theme} setTheme={setTheme} />
-        <div style={{ flex: 1 }}>
+        <div className="flex-1">
           <Routes>
             <Route path="/" element={<About />} />
             <Route path="/education" element={<EducationPage />} />

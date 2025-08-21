@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { Button } from "./ui/button";
+import { Moon, Sun, Menu, X } from "lucide-react";
+import { cn } from "../lib/utils";
 
 function Navbar({ theme, setTheme }) {
   const location = useLocation();
@@ -32,221 +35,110 @@ function Navbar({ theme, setTheme }) {
   ];
 
   return (
-    <nav className="navbar" style={{
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      padding: "1rem 2rem",
-      background: "var(--background)",
-      borderBottom: "1px solid var(--border)",
-      position: "sticky",
-      top: 0,
-      zIndex: 100,
-      backdropFilter: "blur(10px)",
-      boxShadow: "0 2px 10px var(--shadow)"
-    }}>
-      <Link 
-        to="/"
-        className="navbar-brand"
-        style={{ 
-          fontWeight: 700, 
-          fontSize: "1.4rem", 
-          letterSpacing: "1px",
-          background: "linear-gradient(135deg, var(--accent), #ff6b6b)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          backgroundClip: "text",
-          textDecoration: "none"
-        }}
-      >
-        Nafiu | CS Portfolio
-      </Link>
-      
-      {/* Desktop Navigation */}
-      <div className="desktop-nav" style={{ 
-        display: "flex", 
-        alignItems: "center", 
-        gap: "2rem"
-      }}>
-        {navItems.map((item) => {
-          const isActive = location.pathname === item.path;
-          return (
-            <Link
-              key={item.path}
-              to={item.path}
-              style={{
-                ...navLinkStyle,
-                background: isActive ? "var(--accent)" : "transparent",
-                color: isActive ? "white" : "var(--text)",
-                textDecoration: "none"
-              }}
-              onMouseEnter={(e) => {
-                if (!isActive) {
-                  e.target.style.background = "var(--accent)";
-                  e.target.style.color = "white";
-                  e.target.style.transform = "translateY(-2px)";
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (!isActive) {
-                  e.target.style.background = "transparent";
-                  e.target.style.color = "var(--text)";
-                  e.target.style.transform = "translateY(0)";
-                }
-              }}
-            >
-              {item.label}
-            </Link>
-          );
-        })}
-        <button
-          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-          style={{
-            background: "var(--accent)",
-            border: "none",
-            borderRadius: "25px",
-            padding: "0.6rem 1.2rem",
-            cursor: "pointer",
-            fontWeight: 600,
-            color: "white",
-            transition: "all 0.3s ease",
-            boxShadow: "0 4px 15px rgba(0, 123, 255, 0.3)"
-          }}
-          onMouseEnter={(e) => {
-            e.target.style.background = "var(--accent-hover)";
-            e.target.style.transform = "translateY(-2px)";
-            e.target.style.boxShadow = "0 6px 20px rgba(0, 123, 255, 0.4)";
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.background = "var(--accent)";
-            e.target.style.transform = "translateY(0)";
-            e.target.style.boxShadow = "0 4px 15px rgba(0, 123, 255, 0.3)";
-          }}
-          aria-label="Toggle dark/light mode"
+    <nav className="navbar sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-14 items-center justify-between px-4 md:px-6">
+        <Link 
+          to="/"
+          className="flex items-center space-x-2 font-bold text-xl bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
         >
-          {theme === "light" ? "🌙 Dark" : "☀️ Light"}
-        </button>
-      </div>
+          Md Nafiu Rahman
+        </Link>
+        
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-6">
+          <nav className="flex items-center space-x-6">
+            {navItems.map((item) => {
+              const isActive = location.pathname === item.path;
+              return (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={cn(
+                    "text-sm font-medium transition-colors hover:text-primary",
+                    isActive 
+                      ? "text-primary" 
+                      : "text-muted-foreground"
+                  )}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </nav>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+            className="h-9 w-9"
+          >
+            {theme === "light" ? (
+              <Moon className="h-4 w-4" />
+            ) : (
+              <Sun className="h-4 w-4" />
+            )}
+            <span className="sr-only">Toggle theme</span>
+          </Button>
+        </div>
 
-      {/* Mobile Navigation */}
-      <div className="mobile-nav" style={{ 
-        display: "none", 
-        alignItems: "center", 
-        gap: "1rem"
-      }}>
-        {/* Mobile Theme Toggle */}
-        <button
-          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-          style={{
-            background: "var(--accent)",
-            border: "none",
-            borderRadius: "20px",
-            padding: "0.5rem 1rem",
-            cursor: "pointer",
-            fontWeight: 600,
-            color: "white",
-            fontSize: "0.9rem",
-            transition: "all 0.3s ease"
-          }}
-          aria-label="Toggle dark/light mode"
-        >
-          {theme === "light" ? "🌙" : "☀️"}
-        </button>
-
-        {/* Hamburger Menu Button */}
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          style={{
-            background: "transparent",
-            border: "none",
-            cursor: "pointer",
-            padding: "0.5rem",
-            display: "flex",
-            flexDirection: "column",
-            gap: "4px",
-            width: "30px",
-            height: "30px",
-            justifyContent: "center",
-            alignItems: "center"
-          }}
-          aria-label="Toggle mobile menu"
-        >
-          <span style={{
-            width: "20px",
-            height: "2px",
-            background: "var(--text)",
-            transition: "all 0.3s ease",
-            transformOrigin: "center",
-            transform: isMobileMenuOpen ? "rotate(45deg) translateY(6px)" : "rotate(0deg)"
-          }}></span>
-          <span style={{
-            width: "20px",
-            height: "2px",
-            background: "var(--text)",
-            transition: "all 0.3s ease",
-            opacity: isMobileMenuOpen ? 0 : 1
-          }}></span>
-          <span style={{
-            width: "20px",
-            height: "2px",
-            background: "var(--text)",
-            transition: "all 0.3s ease",
-            transformOrigin: "center",
-            transform: isMobileMenuOpen ? "rotate(-45deg) translateY(-6px)" : "rotate(0deg)"
-          }}></span>
-        </button>
+        {/* Mobile Navigation */}
+        <div className="flex md:hidden items-center space-x-2">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+            className="h-9 w-9"
+          >
+            {theme === "light" ? (
+              <Moon className="h-4 w-4" />
+            ) : (
+              <Sun className="h-4 w-4" />
+            )}
+            <span className="sr-only">Toggle theme</span>
+          </Button>
+          
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="h-9 w-9"
+          >
+            {isMobileMenuOpen ? (
+              <X className="h-4 w-4" />
+            ) : (
+              <Menu className="h-4 w-4" />
+            )}
+            <span className="sr-only">Toggle menu</span>
+          </Button>
+        </div>
       </div>
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div style={{
-          position: "absolute",
-          top: "100%",
-          left: 0,
-          right: 0,
-          background: "var(--background)",
-          borderBottom: "1px solid var(--border)",
-          boxShadow: "0 4px 20px var(--shadow)",
-          padding: "1rem",
-          zIndex: 99
-        }}>
-          {navItems.map((item) => {
-            const isActive = location.pathname === item.path;
-            return (
-              <Link
-                key={item.path}
-                to={item.path}
-                onClick={() => setIsMobileMenuOpen(false)}
-                style={{
-                  display: "block",
-                  padding: "1rem",
-                  margin: "0.5rem 0",
-                  borderRadius: "8px",
-                  textDecoration: "none",
-                  background: isActive ? "var(--accent)" : "transparent",
-                  color: isActive ? "white" : "var(--text)",
-                  fontWeight: 600,
-                  transition: "all 0.3s ease",
-                  textAlign: "center"
-                }}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
+        <div className="md:hidden border-t bg-background">
+          <nav className="container grid gap-2 p-4">
+            {navItems.map((item) => {
+              const isActive = location.pathname === item.path;
+              return (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={cn(
+                    "flex items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
+                    isActive 
+                      ? "bg-accent text-accent-foreground" 
+                      : "text-muted-foreground"
+                  )}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </nav>
         </div>
       )}
     </nav>
   );
 }
-
-const navLinkStyle = {
-  fontWeight: 600,
-  fontSize: "1rem",
-  padding: "0.5rem 1rem",
-  borderRadius: "8px",
-  transition: "all 0.3s ease",
-  textTransform: "capitalize"
-};
 
 export default Navbar;
