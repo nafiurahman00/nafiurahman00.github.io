@@ -13,7 +13,10 @@ function Navbar({ theme, setTheme }) {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target) && isMobileMenuOpen) {
-        setIsMobileMenuOpen(false);
+        // Don't close if clicking on the backdrop or menu panel
+        if (!event.target.closest('.mobile-menu-panel') && !event.target.closest('.mobile-menu-backdrop')) {
+          setIsMobileMenuOpen(false);
+        }
       }
     };
 
@@ -23,6 +26,20 @@ function Navbar({ theme, setTheme }) {
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.classList.add('mobile-menu-open');
+    } else {
+      document.body.classList.remove('mobile-menu-open');
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.classList.remove('mobile-menu-open');
     };
   }, [isMobileMenuOpen]);
 
@@ -113,41 +130,63 @@ function Navbar({ theme, setTheme }) {
             onClick={toggleMobileMenu}
             className="h-9 w-9"
           >
-            {isMobileMenuOpen ? (
-              <X className="h-4 w-4" />
-            ) : (
-              <Menu className="h-4 w-4" />
-            )}
+            <Menu className="h-4 w-4" />
             <span className="sr-only">Toggle menu</span>
           </Button>
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden border-t bg-background">
-          <nav className="container grid gap-2 p-4">
-            {navItems.map((item) => {
-              const isActive = location.pathname === item.path;
-              return (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={cn(
-                    "flex items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
-                    isActive 
-                      ? "bg-accent text-accent-foreground" 
-                      : "text-muted-foreground"
-                  )}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
+      {/* Mobile Menu Overlay */}
+      <div className={`md:hidden fixed inset-0 z-40 transition-opacity duration-300 ${
+        isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      }`}>
+        {/* Backdrop */}
+        <div 
+          className="absolute inset-0 bg-black/50 dark:bg-black/70 mobile-menu-backdrop"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+        
+        {/* Sliding Menu Panel */}
+        <div className={`absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-background border-l shadow-2xl mobile-menu-panel transform transition-transform duration-300 ease-out ${
+          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}>
+          <div className="flex items-center justify-between p-4 bg-background">
+            <span className="font-display text-lg text-foreground">Menu</span>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="h-9 w-9"
+            >
+              <X className="h-4 w-4" />
+              <span className="sr-only">Close menu</span>
+            </Button>
+          </div>
+          
+          <nav className="p-4 bg-background">
+            <div className="space-y-1">
+              {navItems.map((item) => {
+                const isActive = location.pathname === item.path;
+                return (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={cn(
+                      "flex items-center rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground font-body",
+                      isActive 
+                        ? "bg-accent text-accent-foreground" 
+                        : "text-muted-foreground hover:text-foreground"
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </div>
           </nav>
         </div>
-      )}
+      </div>
     </nav>
   );
 }
