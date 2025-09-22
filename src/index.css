@@ -183,9 +183,29 @@ html {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
 }
 
-/* Mobile menu body scroll lock */
-.mobile-menu-open {
-  overflow: hidden;
+/* Enhanced sticky navbar styles */
+.navbar-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+/* Ensure proper stacking context */
+.navbar-sticky::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  backdrop-filter: inherit;
+  -webkit-backdrop-filter: inherit;
 }
 
 /* Responsive Design */

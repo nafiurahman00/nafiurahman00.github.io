@@ -1,22 +1,63 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { cn } from "../lib/utils";
+
+// Modern Animated Hamburger Component
+const AnimatedHamburger = ({ isOpen, onClick, className }) => {
+  return (
+    <button
+      onClick={onClick}
+      className={cn(
+        "relative h-9 w-9 flex flex-col items-center justify-center space-y-1.5 transition-all duration-300 hover:bg-accent hover:text-accent-foreground rounded-md",
+        className
+      )}
+      aria-label={isOpen ? "Close menu" : "Open menu"}
+    >
+      <span
+        className={cn(
+          "block h-0.5 w-6 bg-current transition-all duration-300 ease-in-out",
+          isOpen ? "rotate-45 translate-y-2" : ""
+        )}
+      />
+      <span
+        className={cn(
+          "block h-0.5 w-6 bg-current transition-all duration-300 ease-in-out",
+          isOpen ? "opacity-0" : ""
+        )}
+      />
+      <span
+        className={cn(
+          "block h-0.5 w-6 bg-current transition-all duration-300 ease-in-out",
+          isOpen ? "-rotate-45 -translate-y-2" : ""
+        )}
+      />
+    </button>
+  );
+};
 
 function Navbar({ theme, setTheme }) {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef(null);
+
+  // Handle scroll to add enhanced styling when scrolled
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target) && isMobileMenuOpen) {
-        // Don't close if clicking on the backdrop or menu panel
-        if (!event.target.closest('.mobile-menu-panel') && !event.target.closest('.mobile-menu-backdrop')) {
-          setIsMobileMenuOpen(false);
-        }
+        setIsMobileMenuOpen(false);
       }
     };
 
@@ -26,20 +67,6 @@ function Navbar({ theme, setTheme }) {
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [isMobileMenuOpen]);
-
-  // Lock body scroll when mobile menu is open
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.classList.add('mobile-menu-open');
-    } else {
-      document.body.classList.remove('mobile-menu-open');
-    }
-
-    // Cleanup on unmount
-    return () => {
-      document.body.classList.remove('mobile-menu-open');
     };
   }, [isMobileMenuOpen]);
 
@@ -63,7 +90,16 @@ function Navbar({ theme, setTheme }) {
   ];
 
   return (
-    <nav ref={navRef} className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
+    <nav 
+      ref={navRef} 
+      className={cn(
+        "navbar-sticky w-full border-b transition-all duration-300",
+        isScrolled 
+          ? "bg-background/95 backdrop-blur-lg shadow-lg border-border/80" 
+          : "bg-background/80 backdrop-blur-md border-border/60",
+        "supports-[backdrop-filter]:bg-background/60"
+      )}
+    >
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link 
           to="/"
@@ -124,68 +160,42 @@ function Navbar({ theme, setTheme }) {
             <span className="sr-only">Toggle theme</span>
           </Button>
           
-          <Button
-            variant="ghost"
-            size="icon"
+          <AnimatedHamburger
+            isOpen={isMobileMenuOpen}
             onClick={toggleMobileMenu}
-            className="h-9 w-9"
-          >
-            <Menu className="h-4 w-4" />
-            <span className="sr-only">Toggle menu</span>
-          </Button>
+          />
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      <div className={`md:hidden fixed inset-0 z-40 transition-opacity duration-300 ${
-        isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
-      }`}>
-        {/* Backdrop */}
-        <div 
-          className="absolute inset-0 bg-black/50 dark:bg-black/70 mobile-menu-backdrop"
-          onClick={() => setIsMobileMenuOpen(false)}
-        />
-        
-        {/* Sliding Menu Panel */}
-        <div className={`absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-background border-l shadow-2xl mobile-menu-panel transform transition-transform duration-300 ease-out ${
-          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}>
-          <div className="flex items-center justify-between p-4 bg-background">
-            <span className="font-display text-lg text-foreground">Menu</span>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="h-9 w-9"
-            >
-              <X className="h-4 w-4" />
-              <span className="sr-only">Close menu</span>
-            </Button>
+      {/* Mobile Menu - Expanding dropdown */}
+      <div 
+        className={cn(
+          "md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-background border-t",
+          isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        )}
+      >
+        <nav className="container px-4 py-4">
+          <div className="space-y-2">
+            {navItems.map((item) => {
+              const isActive = location.pathname === item.path;
+              return (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={cn(
+                    "block px-3 py-3 rounded-lg text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground font-body",
+                    isActive 
+                      ? "bg-accent text-accent-foreground" 
+                      : "text-muted-foreground hover:text-foreground"
+                  )}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </div>
-          
-          <nav className="p-4 bg-background">
-            <div className="space-y-1">
-              {navItems.map((item) => {
-                const isActive = location.pathname === item.path;
-                return (
-                  <Link
-                    key={item.path}
-                    to={item.path}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className={cn(
-                      "flex items-center rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground font-body",
-                      isActive 
-                        ? "bg-accent text-accent-foreground" 
-                        : "text-muted-foreground hover:text-foreground"
-                    )}
-                  >
-                    {item.label}
-                  </Link>
-                );
-              })}
-            </div>
-          </nav>
-        </div>
+        </nav>
       </div>
     </nav>
   );
