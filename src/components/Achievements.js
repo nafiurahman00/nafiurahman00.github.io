@@ -31,20 +31,20 @@ function Achievements() {
 
   return (
     <section id="achievements" className="space-y-8">
-      <div className="text-center space-y-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+      <div className="text-center space-y-6">
+        <h2 className="text-4xl md:text-5xl font-display text-foreground">
           Achievements
         </h2>
-        <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
+        <div className="w-12 h-0.5 bg-foreground mx-auto"></div>
+        <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed font-body">
           Recognition and accomplishments throughout my academic and professional journey.
         </p>
       </div>
       
-      <Card className="border-l-4 border-l-yellow-500/20 hover:shadow-lg dark:hover:shadow-xl dark:hover:shadow-slate-900/25 dark:hover:border-slate-600 transition-all duration-300">
+      <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
         <CardHeader className="pb-4">
           <CardTitle className="flex items-center gap-2 text-xl">
-            <Trophy className="h-6 w-6 text-yellow-500" />
+            <Trophy className="h-6 w-6 text-foreground" />
             My Achievements
           </CardTitle>
         </CardHeader>
@@ -56,7 +56,7 @@ function Achievements() {
                 className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/5 transition-colors"
               >
                 <div className="mt-1">
-                  <Trophy className="h-4 w-4 text-yellow-500" />
+                  <Trophy className="h-4 w-4 text-foreground" />
                 </div>
                 <p className="text-foreground leading-relaxed font-medium">
                   {achievement}

@@ -23,28 +23,28 @@ function About() {
   }
 
   return (
-    <main className="container max-w-4xl mx-auto py-8 px-4">
-      <Card className="mb-8 overflow-hidden border-0 shadow-xl bg-gradient-to-br from-background to-secondary/20">
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600"></div>
-        <CardHeader className="pb-4">
-          <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
+    <main className="container max-w-5xl mx-auto py-12 px-4">
+      <Card className="mb-12 overflow-hidden border-0 shadow-xl bg-background">
+        <div className="absolute top-0 left-0 right-0 h-0.5 bg-foreground"></div>
+        <CardHeader className="pb-6">
+          <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
             <div className="flex-shrink-0">
               <img 
                 src="/nfu.jpg" 
                 alt="Md Nafiu Rahman"
-                className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-primary/20 shadow-lg"
+                className="w-36 h-36 md:w-44 md:h-44 rounded-full object-cover border-4 border-muted shadow-lg"
               />
             </div>
-            <div className="flex-1 text-center md:text-left space-y-4">
-              <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+            <div className="flex-1 text-center md:text-left space-y-6">
+              <h1 className="text-5xl md:text-6xl font-display text-foreground">
                 {profile.name}
               </h1>
-              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                <Badge variant="secondary" className="text-sm px-3 py-1">
+              <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                <Badge variant="secondary" className="text-sm px-4 py-2">
                   {profile.title}
                 </Badge>
                 {profile.location && (
-                  <Badge variant="outline" className="text-sm px-3 py-1">
+                  <Badge variant="outline" className="text-sm px-4 py-2">
                     📍 {profile.location}
                   </Badge>
                 )}
@@ -117,7 +117,7 @@ function About() {
           download="Md_Nafiu_Rahman_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors text-sm font-medium underline decoration-1 underline-offset-4 hover:decoration-2"
+          className="inline-flex items-center gap-2 text-foreground hover:text-muted-foreground transition-colors text-sm font-medium underline decoration-1 underline-offset-4 hover:decoration-2"
         >
           <Download className="h-4 w-4" />
           Download Resume

@@ -10,79 +10,83 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
   background: hsl(var(--background));
   color: hsl(var(--foreground));
   transition: background 0.3s ease, color 0.3s ease;
   line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
 }
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 0 0% 0%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 0%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222.2 84% 4.9%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96%;
-    --accent-foreground: 222.2 84% 4.9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
-    --radius: 0.5rem;
+    --popover-foreground: 0 0% 0%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 97%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 0% 0%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 93%;
+    --input: 0 0% 93%;
+    --ring: 0 0% 0%;
+    --radius: 0.75rem;
     
     /* Legacy variables for existing components */
-    --text: 222.2 84% 4.9%;
-    --card-bg: 210 40% 96%;
-    --accent-hover: 221.2 83.2% 45%;
-    --shadow: 0 0% 0% / 0.1;
+    --text: 0 0% 0%;
+    --card-bg: 0 0% 98%;
+    --accent-hover: 0 0% 10%;
+    --shadow: 0 0% 0% / 0.05;
     
-    /* Modern gradient colors */
-    --gradient-from: 221.2 83.2% 53.3%;
-    --gradient-via: 250.5 91.2% 66.3%;
-    --gradient-to: 238.7 83.5% 66.7%;
+    /* Modern gradient colors - black and white only */
+    --gradient-from: 0 0% 0%;
+    --gradient-via: 0 0% 20%;
+    --gradient-to: 0 0% 40%;
   }
 
   .dark {
-    --background: 224 71% 8%;
-    --foreground: 210 40% 95%;
-    --card: 224 47% 11%;
-    --card-foreground: 210 40% 95%;
-    --popover: 224 47% 11%;
-    --popover-foreground: 210 40% 95%;
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 84% 4.9%;
-    --secondary: 215 27.9% 16.9%;
-    --secondary-foreground: 210 40% 95%;
-    --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
-    --accent: 215 27.9% 16.9%;
-    --accent-foreground: 210 40% 95%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 215 27.9% 16.9%;
-    --input: 215 27.9% 16.9%;
-    --ring: 224.3 76.3% 94.1%;
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 8%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 0 0% 8%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 0% 98%;
+    --destructive-foreground: 0 0% 0%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 0 0% 98%;
     
     /* Legacy variables for existing components */
-    --text: 210 40% 95%;
-    --card-bg: 215 27.9% 16.9%;
-    --accent-hover: 217.2 91.2% 50%;
+    --text: 0 0% 98%;
+    --card-bg: 0 0% 6%;
+    --accent-hover: 0 0% 90%;
     --shadow: 0 0% 0% / 0.25;
     
-    /* Modern gradient colors for dark mode */
-    --gradient-from: 217.2 91.2% 59.8%;
-    --gradient-via: 250.5 91.2% 76.3%;
-    --gradient-to: 238.7 83.5% 76.7%;
+    /* Modern gradient colors for dark mode - black and white only */
+    --gradient-from: 0 0% 98%;
+    --gradient-via: 0 0% 80%;
+    --gradient-to: 0 0% 60%;
   }
 }
 
@@ -105,6 +109,78 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Modern glass effect for cards */
+.glass-effect {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid hsl(var(--border));
+}
+
+/* Modern hover animations */
+.hover-lift {
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* Modern focus styles */
+.focus-modern:focus {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+/* Smooth text rendering */
+.text-smooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Modern typography utilities */
+.text-tight {
+  letter-spacing: -0.025em;
+}
+
+.text-extra-tight {
+  letter-spacing: -0.05em;
+}
+
+.text-balanced {
+  text-wrap: balance;
+}
+
+.font-display {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.font-body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.6;
+}
+
+/* Modern shadow utilities */
+.shadow-modern {
+  box-shadow: 0 1px 3px 0 hsl(var(--shadow)), 0 1px 2px -1px hsl(var(--shadow));
+}
+
+.shadow-modern-lg {
+  box-shadow: 0 10px 15px -3px hsl(var(--shadow)), 0 4px 6px -4px hsl(var(--shadow));
+}
+
+.dark .shadow-modern {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px -1px rgba(0, 0, 0, 0.3);
+}
+
+.dark .shadow-modern-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
 }
 
 /* Responsive Design */

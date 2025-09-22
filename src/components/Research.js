@@ -38,21 +38,21 @@ function Research() {
 
   return (
     <section id="research" className="space-y-8">
-      <div className="text-center space-y-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+      <div className="text-center space-y-6">
+        <h2 className="text-4xl md:text-5xl font-display text-foreground">
           Research Experience
         </h2>
-        <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
+        <div className="w-12 h-0.5 bg-foreground mx-auto"></div>
+        <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed font-body">
           My research work in Computer Science, focusing on cybersecurity, machine learning, and software engineering.
         </p>
       </div>
       
-      <div className="grid gap-6">
+      <div className="grid gap-8">
         {research.map((item, idx) => (
           <Card 
             key={idx}
-            className="group hover:shadow-lg dark:hover:shadow-xl dark:hover:shadow-slate-900/25 dark:hover:border-slate-600 transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-primary/20 hover:border-l-primary/40"
+            className="group border-0 shadow-lg hover:shadow-xl transition-all duration-300"
           >
             <CardHeader className="pb-3">
               <div className="flex flex-col gap-3">

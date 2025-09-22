@@ -71,7 +71,7 @@ function Footer() {
             </p>
             <p className="text-muted-foreground text-xs flex items-center justify-center gap-1">
               Built with React & Shadcn/UI • Designed with 
-              <Heart className="h-3 w-3 text-red-500 fill-current" />
+              <Heart className="h-3 w-3 text-foreground fill-current" />
             </p>
           </div>
         </div>

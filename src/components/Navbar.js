@@ -46,11 +46,11 @@ function Navbar({ theme, setTheme }) {
   ];
 
   return (
-    <nav ref={navRef} className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center justify-between px-4 md:px-6">
+    <nav ref={navRef} className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link 
           to="/"
-          className="flex items-center space-x-2 font-bold text-xl bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+          className="flex items-center space-x-2 font-display text-xl text-foreground hover:text-muted-foreground transition-colors"
         >
           Md Nafiu Rahman
         </Link>
@@ -65,7 +65,7 @@ function Navbar({ theme, setTheme }) {
                   key={item.path}
                   to={item.path}
                   className={cn(
-                    "text-sm font-medium transition-colors hover:text-primary",
+                    "text-sm font-medium transition-colors hover:text-primary font-body",
                     isActive 
                       ? "text-primary" 
                       : "text-muted-foreground"
