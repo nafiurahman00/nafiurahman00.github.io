@@ -1,26 +1,50 @@
 [
   {
-    "name": "BusBuddy",
-    "technologies": ["Flutter", "NodeJs", "PostgreSQL", "Firebase", "Git"],
-    "description": "Android app for BUET providing ticketing, schedules, bus tracking, and real-time updates for users, teachers, and bus staff.",
+    "name": "Machine Learning Algorithms and Neural Network from Scratch",
+    "technologies": ["Python", "NumPy"],
+    "description": "Implementations of core ML algorithms (logistic regression with ensembles, PCA/SVD for reconstruction, EM clustering) and a feed-forward neural network with Adam optimizer built from numpy.",
+    "githubLink": "https://github.com/nafiurahman00/CSE-472"
+  },
+  {
+    "name": "Cryptography and Security Attacks",
+    "technologies": ["Python", "C++", "Security"],
+    "description": "Implemented AES encryption and Diffie-Hellman key exchange, socket communication demos, and reviewed a mobile pentesting framework as part of course project.",
+    "githubLink": "https://github.com/nafiurahman00/CSE-406"
+  },
+  {
+    "name": "Network Simulation",
+    "technologies": ["C++", "NS2"],
+    "description": "Implemented Congestion Control Algorithm, threaded server-client sockets, error correction algorithms and simulated wired/wireless mobility scenarios.",
+    "githubLink": "https://github.com/nafiurahman00/CSE-322"
+  },
+  {
+    "name": "Operating System Internals with xv6",
+    "technologies": ["C", "xv6"],
+    "description": "Implemented threading and synchronization primitives, system calls, and explored scheduler internals in xv6.",
+    "githubLink": "https://github.com/nafiurahman00/CSE-314"
+  },
+  {
+    "name": "BusBuddy (Android)",
+    "technologies": ["Flutter", "Node.js", "PostgreSQL", "Firebase"],
+    "description": "Flutter app with Node.js backend, PostgreSQL and Firebase integration. Provided ticketing, schedules, tracking and real-time updates for university bus users.",
     "githubLink": "https://github.com/nafiurahman00/BusBuddy-Client-End"
   },
   {
-    "name": "Nishorgo",
-    "technologies": ["JavaScript", "HTML", "CSS", "PHP", "MySQL", "Git"],
-    "description": "E-commerce site for plant sales with filtering, cart, admin analytics, and order management.",
+    "name": "Nishorgo (E-commerce)",
+    "technologies": ["JavaScript", "HTML", "CSS", "PHP", "MySQL"],
+    "description": "Full stack e-commerce site for plant sales with filtering, cart, admin analytics and order management.",
     "githubLink": "https://github.com/nafiurahman00/Term-Project-2-2-Nishorgo"
   },
   {
-    "name": "Compiler",
-    "technologies": ["C", "C++", "Lex", "Yacc", "8086-Assembly"],
-    "description": "Subset of a C compiler with loops, branching, recursion, and intermediate code generation. Implemented lexer, parser, and code generator.",
+    "name": "Compiler (subset of C)",
+    "technologies": ["C", "C++", "Lex", "Yacc", "8086 Assembly"],
+    "description": "Subset-of-C compiler using Lex/Yacc and 8086-style assembly generation: lexer, parser, and intermediate code generation.",
     "githubLink": "https://github.com/nafiurahman00/Compiler"
   },
   {
-    "name": "Catch the Egg",
+    "name": "Catch the Egg (Game)",
     "technologies": ["OpenGL", "C++", "Igraphics"],
-    "description": "Game using Igraphics for catching falling eggs, with scoring and difficulty levels. Solely implemented all game features.",
+    "description": "OpenGL / Igraphics game for catching falling eggs; implemented game mechanics, scoring and difficulty scaling.",
     "githubLink": "https://github.com/nafiurahman00/Catch-The-Egg"
   }
 ]

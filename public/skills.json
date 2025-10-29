@@ -1,26 +1,12 @@
 {
-  "researchInterests": [
-    "Software Security: Secret Detection using regex and LLMs, vulnerability analysis",
-    "Bioinformatics: Brain aging prediction, Multimodal age prediction techniques",
-    "Deep Learning: Transformer-based architectures, Generative models, Feature selection strategies",
-    "LLM: Fine Tuning models like BERT, RoBERTa, LLAMA, Mistral, Zero shot and Few shot Prompting"
-  ],
-  "languages": [
-    "Proficient in English, native speaker of Bengali"
-  ],
-  "technicalSkills": [
-    "Python", "Microsoft Excel", "NumPy", "scikit-learn", "Pandas", "PyTorch", "Torchvision", "TensorFlow"
-  ],
-  "databaseSkills": [
-    "PostgreSQL", "PL/pgSQL", "MongoDB", "Firebase Firestore"
-  ],
-  "fullStack": [
-    "Node.js (backend)", "HTML/CSS", "ReactJS", "Svelte", "Flutter (mobile apps)"
-  ],
-  "programmingLanguages": [
-    "C/C++", "Python", "Java", "JavaScript/TypeScript", "PHP", "Bash", "Dart"
-  ],
-  "coursework": [
-    "Data Structure and Algorithms", "Machine Learning", "Artificial Intelligence", "Object-Oriented Programming", "Software Engineering", "Information System Design", "Database", "Computer Networks", "Computer Security"
+  "technicalSkills": {
+    "Data Science & ML": ["Python", "NumPy", "Pandas", "scikit-learn", "PyTorch", "TensorFlow", "torchvision", "Microsoft Excel"],
+    "Databases": ["PostgreSQL", "PL/pgSQL", "MongoDB", "Firebase Firestore"],
+    "Full-Stack": ["Node.js (backend)", "HTML/CSS", "Svelte", "Flutter (mobile)"],
+    "Languages": ["C/C++", "Python", "Java", "JavaScript / TypeScript", "PHP", "Bash", "Dart"]
+  },
+  "spokenLanguages": [
+    "English (proficient)",
+    "Bengali (native)"
   ]
 }

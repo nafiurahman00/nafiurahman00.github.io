@@ -1,9 +1,11 @@
 {
   "name": "Md Nafiu Rahman",
   "title": "CS Graduate | Bangladesh University of Engineering and Technology",
+  "location": "Dhaka, Bangladesh",
   "email": "nafiu.rahman@gmail.com",
-  "phone": "+8801933002218",
-  "linkedin": "https://www.linkedin.com/in/md-nafiu-rahman-1a782a262/",
+  "phone": "+88 01933-002218",
+  "website": "https://nafiurahman00.github.io",
+  "linkedin": "https://www.linkedin.com/in/mdnafiurahman/",
   "github": "https://github.com/nafiurahman00",
-  "bio": "Welcome to my professional portfolio. I am passionate about software security, bioinformatics, deep learning, and large language models. Explore my education, research, skills, projects, and achievements below."
+  "bio": "I’m a researcher with a strong passion for Software Engineering and Large Language Models (LLMs). Currently, I work as a Lecturer in the Department of Computer Science and Engineering at BRAC University. My research aims to connect advanced AI methodologies with key challenges in modern software development."
 }
