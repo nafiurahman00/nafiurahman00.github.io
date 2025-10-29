@@ -837,6 +837,10 @@ body {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+.moon-icon {
+    stroke: #ffffff;
+}
+
 [data-theme="light"] .sun-icon {
     opacity: 1;
     transform: rotate(0deg);
