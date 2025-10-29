@@ -731,15 +731,6 @@ body {
     html {
         font-size: 14px;
     }
-    
-    .hero-contact {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    
-    .contact-link {
-        justify-content: center;
-    }
 }
 
 /* ===================================
