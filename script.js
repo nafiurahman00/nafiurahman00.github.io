@@ -72,13 +72,12 @@ function renderHomePage() {
                     </svg>
                     <span>GitHub</span>
                 </a>
-                <a href="${profile.website}" target="_blank" rel="noopener noreferrer" class="contact-link">
+                <a href="${profile.googlescholar}" target="_blank" rel="noopener noreferrer" class="contact-link">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
                     </svg>
-                    <span>Website</span>
+                    <span>Google Scholar</span>
                 </a>
             </div>
             
