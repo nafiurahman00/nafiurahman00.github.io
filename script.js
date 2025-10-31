@@ -87,7 +87,7 @@ function renderHomePage() {
                             <polyline points="7 10 12 15 17 10"></polyline>
                             <line x1="12" y1="15" x2="12" y2="3"></line>
                         </svg>
-                        Download CV
+                        <span>Download CV</span>
                     </a>
                 </div>
             </div>
@@ -125,7 +125,7 @@ function renderExperiencePage() {
     const work = data.work;
     return `
         <div class="page-section">
-            <h1 class="section-title" style="text-align: center;">Professional Experience</h1>
+            <h1 class="section-title" style="text-align: center;">Work Experience</h1>
             <div class="timeline">
                 ${work.map(job => `
                     <div class="timeline-item">
@@ -169,7 +169,7 @@ function renderResearchPage() {
                                         <polyline points="15 3 21 3 21 9"></polyline>
                                         <line x1="10" y1="14" x2="21" y2="3"></line>
                                     </svg>
-                                    Paper Link
+                                    <span>Paper Link</span>
                                 </a>
                             </div>
                         ` : ''}
