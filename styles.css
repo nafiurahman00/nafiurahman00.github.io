@@ -709,6 +709,13 @@ body {
     letter-spacing: 0.06em;
 }
 
+.research-links {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
 .research-paper-link {
     margin-bottom: var(--spacing-sm);
 }

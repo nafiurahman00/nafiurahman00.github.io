@@ -4,6 +4,7 @@
     "authors": "Md Nafiu Rahman, Sadif Ahmed, Zahin Wahab, Rifat Shahriyar, S. M. Sohan",
     "venue": "ESEM 2025 Technical Track",
     "paperLink": "https://conf.researchr.org/details/esem-2025/esem-2025-technical-track/8/Secret-Breach-Detection-in-Source-Code-with-Large-Language-Models",
+    "codelink": "https://github.com/nafiurahman00/Source-Code-Secret-Detection-with-LLMs",
     "description": "We propose a hybrid LLM-based framework for secret detection in source code, combining regex-based extraction with LLM classification to reduce false positives. Fine-tuned open-source models, including LLaMA-3.1 8B and Mistral-7B, achieve up to 0.985 F1 and 0.982 accuracy on a large GitHub benchmark, demonstrating the effectiveness and practicality of LLM fine-tuning for secure, local deployment.",
     "year": "2025",
     "status": "Published at ESEM 2025 Technical Track"
@@ -13,6 +14,7 @@
     "authors": "Sadif Ahmed, Md Nafiu Rahman, Zahin Wahab, Rifat Shahriyar, Gias Uddin",
     "venue": "arXiv",
     "paperLink": "https://arxiv.org/abs/2410.23657",
+    "codelink": "https://github.com/nafiurahman00/Secret-Breach-Prevention-In-Software-Issue-Reports",
     "description": "We introduce a hybrid LLM-based pipeline for detecting secret leaks in GitHub issue reports, combining regex extraction with contextual classification. Trained on 54,000 instances with 5,800+ verified secrets, fine-tuned open-source models like Qwen and LLaMA achieve up to 94.49% F1 and generalize well to real-world repositories (81.6% F1), highlighting their effectiveness for practical secret detection.",
     "year": "2024",
     "status": "Submitted at MSR 2026 Technical Track"
@@ -29,6 +31,7 @@
   {
     "title": "BanglaForge: LLM Collaboration with Self-Refinement for Bangla Code Generation",
     "authors": "Mahir Labib Dihan, Sadif Ahmed, Md Nafiu Rahman",
+    "codelink": "https://github.com/mahirlabibdihan/BanglaForge",
     "description": "We introduce BanglaForge, a new framework designed to generate executable code from Bangla language descriptions, addressing the challenges of a low-resource setting. Our approach employs a retrieval-augmented dual-model collaboration paradigm with iterative self-refinement guided by execution feedback. By integrating LLM-based translation and in-context learning, the system achieves a strong Pass@1 accuracy of 84.00% on the BLP-2025 Bangla Code Generation benchmark, demonstrating the effectiveness of our method for low-resource code generation.",
     "year": "2025",
     "status": "Submitted at BLP Workshop at AACL-IJCNLP 2025"
@@ -37,7 +40,7 @@
     "title": "EVCC: Enhanced Vision Transformer-ConvNeXt-CoAtNet Fusion with Adaptive Routing for Classification",
     "authors": "Kazi Reyazul Hasan, Md Nafiu Rahman, Sadif Ahmed, Wasif Jalal, Shahriar Raj, Mubasshira Musarrat, Muhammad Abdullah Adnan",
     "venue": "OpenReview",
-    "paperLink": "https://openreview.net/forum?id=97QQAYrK6k&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3Dthecvf.com%2FWACV%2F2026%2FConference%2FAuthors%23your-submissions)",
+    "codelink": "https://github.com/kreyazulh/EVCC",
     "description": "We introduce EVCC, a multi-branch hybrid architecture that combines Transformers and convolutional backbones via adaptive token pruning, gated cross-attention, auxiliary heads, and a dynamic routing mechanism. Experiments demonstrate improved accuracy-efficiency trade-offs across multiple datasets, with meaningful FLOP reductions while maintaining or improving classification accuracy.",
     "year": "2025",
     "status": "Submitted at WACV 2026"
@@ -46,6 +49,7 @@
     "title": "Explainable Transformer-CNN Hybrid for Modeling Brain Aging from MRI Images",
     "authors": "Wasif Jalal, Md Nafiu Rahman, Md Sohel Rahman",
     "description": "An ongoing research into hybrid Transformer-CNN models for brain-age prediction from MRI slices, emphasizing explainability and interpretable feature fusion between slice-wise and volumetric representations.",
+    "codelink": "https://github.com/wjalal/cse472_DL_project",
     "year": "2025",
     "status": "Ongoing"
   }
