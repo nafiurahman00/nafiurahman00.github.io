@@ -67,7 +67,6 @@ function populateProfile(profile) {
 	
 	const contactHtml = `
 		<p>Email: ${profile.email}</p>
-		<p>Phone: ${profile.phone}</p>
 		<p>
 			Links:
 			${profile.cv ? `[<a href="${profile.cv}" target="_blank">Curriculum Vitae</a>]` : ''}
