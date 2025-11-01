@@ -1,63 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Md Nafiu Rahman - CS Graduate, Researcher, and Lecturer specializing in Software Engineering and LLMs">
-    <title>Md Nafiu Rahman | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Navigation -->
-        <nav class="navbar">
-        <div class="container navbar-container">
-            <a href="#home" class="logo" data-page="home">Md Nafiu Rahman</a>
-            <button class="hamburger" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link" data-page="home">About</a></li>
-                <li><a href="#education" class="nav-link" data-page="education">Education</a></li>
-                <li><a href="#experience" class="nav-link" data-page="experience">Experience</a></li>
-                <li><a href="#research" class="nav-link" data-page="research">Research</a></li>
-                <li><a href="#projects" class="nav-link" data-page="projects">Projects</a></li>
-                <li><a href="#skills" class="nav-link" data-page="skills">Skills</a></li>
-                <li><a href="#achievements" class="nav-link" data-page="achievements">Achievements</a></li>
-                <li class="theme-toggle-wrapper"><button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                </button></li>
-            </ul>
+    <head>
+        <title>Md Nafiu Rahman</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+	    <meta property="og:title" content="Md Nafiu Rahman" />
+	    <meta property="og:image" content="https://zahinwahab.github.io/img/zahin.JPG" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="author" content="Md Nafiu Rahman">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" type="image/png" href="img/icon.ico"/>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.8/popper.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
+        <script  src="js/script.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZV0B4L7RW1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-ZV0B4L7RW1');
+	</script>
+    </head>
+    <body>
+    	<style>
+		pre {
+    		text-align: left;
+    		white-space: pre-line;
+  		}
+		</style>
+
+        <div class="container mt-5" >
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+                <div class="container">
+                        <button id="myButton" class="navbar-toggler" type="button" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#publications">Publications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ongoing-projects">Notable Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#education">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#professional-experience">Professional Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#honors-awards">Honors & Awards</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        </ul>
+                        </div>
+                </div>
+            </nav>
+    
+            <div class="row mb-3" id="about">
+                <div class="col"><br/>
+                    <h1 id="profile-name">Loading...</h1>
+                </div>
+            </div>
+
+            <div class="row" style="font-size:110%;">
+                <div class="col-md-4 order-md-2">
+                    <img id="profile-image" src="" alt="Profile" class="img-fluid rounded">
+                </div>
+                <div class="col-md-8 order-md-1" id="profile-bio">
+                    <!-- Bio will be populated dynamically -->
+                </div>
+            </div>
+
+            <div class="row" style="font-size:110%;">
+                <div class="col" id="profile-contact">
+                    <!-- Contact info will be populated dynamically -->
+                </div>
+            </div>
+            
+            <hr>
+
+            <hr>
+
+            <div class="row" id="publications">
+                <div class="col">
+                    <h2>Publications</h2>
+                    <ol id="research-list">
+                        <!-- Research papers will be populated dynamically -->
+                    </ol>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row" id="ongoing-projects">
+                <div class="col">
+                    <h2>Notable Projects</h2>
+                    <ol id="projects-list">
+                        <!-- Projects will be populated dynamically -->
+                    </ol>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row" id="education">
+                <div class="col">
+                    <h2>Education</h2>
+                    <ul id="education-list">
+                        <!-- Education will be populated dynamically -->
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row" id="professional-experience">
+                <div class="col">
+                    <h2>Work Experience</h2>
+                    <ul id="work-list">
+                        <!-- Work experience will be populated dynamically -->
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row" id="honors-awards">
+                <div class="col">
+                    <h2>Honors & Awards</h2>
+                    <ul id="achievements-list">
+                        <!-- Achievements will be populated dynamically -->
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row" id="skills">
+                <div class="col">
+                    <h2>Technical Skills</h2>
+                    <div id="skills-content">
+                        <!-- Skills will be populated dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
         </div>
-    </nav>
 
-    <!-- Main Content -->
-    <main class="container main-content" id="main-content">
-        <!-- Content will be dynamically loaded here -->
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; <span id="currentYear"></span> Md Nafiu Rahman. All rights reserved.</p>
-            <p class="footer-note">Last updated: October 29, 2025</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+	    
+    </body>
 </html>
