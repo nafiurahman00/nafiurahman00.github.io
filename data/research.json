@@ -7,7 +7,7 @@
     "codelink": "https://github.com/nafiurahman00/Source-Code-Secret-Detection-with-LLMs",
     "description": "We propose a hybrid LLM-based framework for secret detection in source code, combining regex-based extraction with LLM classification to reduce false positives. Fine-tuned open-source models, including LLaMA-3.1 8B and Mistral-7B, achieve up to 0.985 F1 and 0.982 accuracy on a large GitHub benchmark, demonstrating the effectiveness and practicality of LLM fine-tuning for secure, local deployment.",
     "year": "2025",
-    "status": "Published at ESEM 2025 Technical Track"
+    "status": "Accepted at ESEM 2025 Technical Track"
   },
   {
     "title": "Secret Leak Detection in Software Issue Reports using LLMs: A Comprehensive Evaluation",
@@ -34,7 +34,7 @@
     "codelink": "https://github.com/mahirlabibdihan/BanglaForge",
     "description": "We introduce BanglaForge, a new framework designed to generate executable code from Bangla language descriptions, addressing the challenges of a low-resource setting. Our approach employs a retrieval-augmented dual-model collaboration paradigm with iterative self-refinement guided by execution feedback. By integrating LLM-based translation and in-context learning, the system achieves a strong Pass@1 accuracy of 84.00% on the BLP-2025 Bangla Code Generation benchmark, demonstrating the effectiveness of our method for low-resource code generation.",
     "year": "2025",
-    "status": "Submitted at BLP Workshop at AACL-IJCNLP 2025"
+    "status": "Accepted at BLP Workshop at AACL-IJCNLP 2025"
   },
   {
     "title": "EVCC: Enhanced Vision Transformer-ConvNeXt-CoAtNet Fusion with Adaptive Routing for Classification",
