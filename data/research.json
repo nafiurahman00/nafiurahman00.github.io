@@ -10,6 +10,14 @@
     "status": "Accepted at ESEM 2025 Technical Track"
   },
   {
+    "title": "BanglaForge: LLM Collaboration with Self-Refinement for Bangla Code Generation",
+    "authors": "Mahir Labib Dihan, Sadif Ahmed, Md Nafiu Rahman",
+    "codelink": "https://github.com/mahirlabibdihan/BanglaForge",
+    "description": "We introduce BanglaForge, a new framework designed to generate executable code from Bangla language descriptions, addressing the challenges of a low-resource setting. Our approach employs a retrieval-augmented dual-model collaboration paradigm with iterative self-refinement guided by execution feedback. By integrating LLM-based translation and in-context learning, the system achieves a strong Pass@1 accuracy of 84.00% on the BLP-2025 Bangla Code Generation benchmark, demonstrating the effectiveness of our method for low-resource code generation.",
+    "year": "2025",
+    "status": "Accepted at BLP Workshop at AACL-IJCNLP 2025"
+  },
+  {
     "title": "Secret Leak Detection in Software Issue Reports using LLMs: A Comprehensive Evaluation",
     "authors": "Sadif Ahmed, Md Nafiu Rahman, Zahin Wahab, Rifat Shahriyar, Gias Uddin",
     "venue": "arXiv",
@@ -20,6 +28,15 @@
     "status": "Submitted at MSR 2026 Technical Track"
   },
   {
+    "title": "ISSUEGUARD: Real-Time Secret Leak Prevention Tool for GitHub Issue Reports",
+    "authors": "Md Nafiu Rahman, Sadif Ahmed, Zahin Wahab, Rifat Shahriyar, Gias Uddin",
+    "codelink": "https://github.com/nafiurahman00/IssueGuard",
+    "description": "We introduce a tool IssueGuard to detect sensitive information in Github issues prior posting, reducing false positivs leveraging a fine-tuned CodeBERT model, optimized with LRU cache and amp precision for very fast inference. We also did a user study with 50 participants to test the effectiveness of the tool, which expressed satisfactory results.",
+    "year": "2025",
+    "status": "Submitted at SANER 2026 Tool Track"
+  },
+  
+  {
     "title": "A Survey on Agentic Security: Applications, Threats and Defenses",
     "authors": "Asif Shahriar, Md Nafiu Rahman, Sadif Ahmed, Farig Sadeque, Md Rizwan Parvez",
     "venue": "arXiv",
@@ -29,28 +46,20 @@
     "status": "Submitted at EACL 2026"
   },
   {
-    "title": "BanglaForge: LLM Collaboration with Self-Refinement for Bangla Code Generation",
-    "authors": "Mahir Labib Dihan, Sadif Ahmed, Md Nafiu Rahman",
-    "codelink": "https://github.com/mahirlabibdihan/BanglaForge",
-    "description": "We introduce BanglaForge, a new framework designed to generate executable code from Bangla language descriptions, addressing the challenges of a low-resource setting. Our approach employs a retrieval-augmented dual-model collaboration paradigm with iterative self-refinement guided by execution feedback. By integrating LLM-based translation and in-context learning, the system achieves a strong Pass@1 accuracy of 84.00% on the BLP-2025 Bangla Code Generation benchmark, demonstrating the effectiveness of our method for low-resource code generation.",
+    "title": "Explainable Transformer-CNN Hybrid for Modeling Brain Aging from MRI Images",
+    "authors": "Wasif Jalal, Md Nafiu Rahman, Md Sohel Rahman",
+    "paperLink": "https://arxiv.org/abs/2511.15188",
+    "description": "An ongoing research into hybrid Transformer-CNN models for brain-age prediction from MRI slices, emphasizing explainability and interpretable feature fusion between slice-wise and volumetric representations.",
+    "codelink": "https://github.com/wjalal/cse472_DL_project",
     "year": "2025",
-    "status": "Accepted at BLP Workshop at AACL-IJCNLP 2025"
+    "status": "Ongoing"
   },
   {
     "title": "EVCC: Enhanced Vision Transformer-ConvNeXt-CoAtNet Fusion with Adaptive Routing for Classification",
     "authors": "Kazi Reyazul Hasan, Md Nafiu Rahman, Sadif Ahmed, Wasif Jalal, Shahriar Raj, Mubasshira Musarrat, Muhammad Abdullah Adnan",
-    "venue": "OpenReview",
     "codelink": "https://github.com/kreyazulh/EVCC",
     "description": "We introduce EVCC, a multi-branch hybrid architecture that combines Transformers and convolutional backbones via adaptive token pruning, gated cross-attention, auxiliary heads, and a dynamic routing mechanism. Experiments demonstrate improved accuracy-efficiency trade-offs across multiple datasets, with meaningful FLOP reductions while maintaining or improving classification accuracy.",
     "year": "2025",
     "status": "Submitted at WACV 2026"
   },
-  {
-    "title": "Explainable Transformer-CNN Hybrid for Modeling Brain Aging from MRI Images",
-    "authors": "Wasif Jalal, Md Nafiu Rahman, Md Sohel Rahman",
-    "description": "An ongoing research into hybrid Transformer-CNN models for brain-age prediction from MRI slices, emphasizing explainability and interpretable feature fusion between slice-wise and volumetric representations.",
-    "codelink": "https://github.com/wjalal/cse472_DL_project",
-    "year": "2025",
-    "status": "Ongoing"
-  }
 ]
