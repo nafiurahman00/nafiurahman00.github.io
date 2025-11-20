@@ -61,5 +61,5 @@
     "description": "We introduce EVCC, a multi-branch hybrid architecture that combines Transformers and convolutional backbones via adaptive token pruning, gated cross-attention, auxiliary heads, and a dynamic routing mechanism. Experiments demonstrate improved accuracy-efficiency trade-offs across multiple datasets, with meaningful FLOP reductions while maintaining or improving classification accuracy.",
     "year": "2025",
     "status": "Submitted at WACV 2026"
-  },
+  }
 ]
