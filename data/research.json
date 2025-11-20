@@ -12,6 +12,7 @@
   {
     "title": "BanglaForge: LLM Collaboration with Self-Refinement for Bangla Code Generation",
     "authors": "Mahir Labib Dihan, Sadif Ahmed, Md Nafiu Rahman",
+    "venue": "BLP Workshop at AACL-IJCNLP 2025",
     "codelink": "https://github.com/mahirlabibdihan/BanglaForge",
     "description": "We introduce BanglaForge, a new framework designed to generate executable code from Bangla language descriptions, addressing the challenges of a low-resource setting. Our approach employs a retrieval-augmented dual-model collaboration paradigm with iterative self-refinement guided by execution feedback. By integrating LLM-based translation and in-context learning, the system achieves a strong Pass@1 accuracy of 84.00% on the BLP-2025 Bangla Code Generation benchmark, demonstrating the effectiveness of our method for low-resource code generation.",
     "year": "2025",
@@ -35,7 +36,6 @@
     "year": "2025",
     "status": "Submitted at SANER 2026 Tool Track"
   },
-  
   {
     "title": "A Survey on Agentic Security: Applications, Threats and Defenses",
     "authors": "Asif Shahriar, Md Nafiu Rahman, Sadif Ahmed, Farig Sadeque, Md Rizwan Parvez",
@@ -48,11 +48,12 @@
   {
     "title": "Explainable Transformer-CNN Hybrid for Modeling Brain Aging from MRI Images",
     "authors": "Wasif Jalal, Md Nafiu Rahman, Md Sohel Rahman",
+    "venue": "arXiv",
     "paperLink": "https://arxiv.org/abs/2511.15188",
     "description": "An ongoing research into hybrid Transformer-CNN models for brain-age prediction from MRI slices, emphasizing explainability and interpretable feature fusion between slice-wise and volumetric representations.",
     "codelink": "https://github.com/wjalal/cse472_DL_project",
     "year": "2025",
-    "status": "Ongoing"
+    "status": "In preparation for submission"
   },
   {
     "title": "EVCC: Enhanced Vision Transformer-ConvNeXt-CoAtNet Fusion with Adaptive Routing for Classification",
@@ -60,6 +61,6 @@
     "codelink": "https://github.com/kreyazulh/EVCC",
     "description": "We introduce EVCC, a multi-branch hybrid architecture that combines Transformers and convolutional backbones via adaptive token pruning, gated cross-attention, auxiliary heads, and a dynamic routing mechanism. Experiments demonstrate improved accuracy-efficiency trade-offs across multiple datasets, with meaningful FLOP reductions while maintaining or improving classification accuracy.",
     "year": "2025",
-    "status": "Submitted at WACV 2026"
+    "status": "Ongoing"
   }
 ]
